@@ -1,0 +1,651 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- ============================================================
+     EDIT THIS CARD — everything person-specific lives in this block.
+     The next person's card = change this block + swap the files in
+     media/ (and brand/ if it's a different company). Nothing below
+     the END marker needs to change.
+     (The <title>/<meta> lines are here too because link previews
+     read them without running any script.)
+     ============================================================ -->
+<title>Nate Ivy · NextSketch</title>
+<meta name="description" content="Lead Product Architect &amp; CEO, NextSketch. From idea to production.">
+<meta property="og:title" content="Nate Ivy">
+<meta property="og:description" content="Lead Product Architect &amp; CEO, NextSketch. From idea to production.">
+<meta property="og:type" content="profile">
+<meta name="theme-color" content="#0A0A0C">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<script>
+window.CARD = {
+  // Name. displayName is what the card shows; the saved contact uses
+  // firstName/lastName with nickname.
+  displayName: "Nate Ivy",
+  firstName: "Nathan",
+  lastName: "Ivy",
+  nickname: "Nate",
+  title: "Lead Product Architect & CEO",
+  org: "NextSketch",
+
+  // Eyebrow over the name: "<label> · <live local time>"
+  place: { label: "Chicago", timeZone: "America/Chicago" },
+
+  // Line under the hero. First item is bold; any others follow as " · item".
+  roleLine: ["Lead Product Architect & CEO"],
+  badges: ["Product Development", "AI Integrations"],
+
+  // Back of the flip (the cream side).
+  back: {
+    logo: "brand/logo-dark.svg",
+    line: "From idea to production.",
+    body: "You’re not hiring a vendor. You’re gaining a product partner."
+  },
+
+  // Link list. Every link here also goes into the saved contact.
+  // icon: "website" | "linkedin" | "instagram" | "x" | "youtube" | "tiktok"
+  links: [
+    { icon: "website",  name: "Website",  sub: "nextsketch.com", url: "https://www.nextsketch.com" },
+    { icon: "linkedin", name: "LinkedIn", sub: "Nate Ivy",       url: "https://www.linkedin.com/in/nathan-ivy" }
+  ],
+
+  // Contact-only fields. Empty = left off the card and the saved contact.
+  phone: "",
+  email: "nate@nextsketch.com",
+  // Tiles under the Save button: any of "call", "email", or a link icon key.
+  // Empty = no tile row.
+  quickActions: [],
+
+  footer: { logo: "brand/logo-cream.svg", text: "© 2026 Next Sketch LLC" },
+
+  media: {
+    video: "media/portrait.mp4",      // silent, seamless loop
+    poster: "media/poster.jpg",       // first frame; paints before the video plays
+    contactPhoto: "media/contact.jpg" // square JPEG, goes into the saved contact
+  },
+
+  share: { title: "Nate Ivy", text: "Nate Ivy — Lead Product Architect & CEO, NextSketch" },
+
+  labels: {
+    tap: "Tap",
+    tapBack: "Tap to flip back",
+    save: "Save my contact",
+    linksHeading: "Follow along",
+    qrHeading: "Scan to open",
+    qrCaption: "Point a camera here to save my card.",
+    saved: "Contact card downloaded — open it to add me.",
+    saveFailed: "Could not download the contact card.",
+    copied: "Link copied to clipboard."
+  }
+};
+</script>
+<!-- ========================= END EDIT ========================= -->
+
+<script>
+  // Start the poster download before the body is parsed.
+  (function () {
+    var l = document.createElement("link");
+    l.rel = "preload"; l.as = "image"; l.href = window.CARD.media.poster;
+    document.head.appendChild(l);
+  })();
+</script>
+<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<script src="vendor/qrcode.js" defer></script>
+
+<style>
+  @font-face {
+    font-family: "Space Grotesk";
+    src: url("fonts/space-grotesk.woff2") format("woff2");
+    font-weight: 300 700; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: "JetBrains Mono";
+    src: url("fonts/jetbrains-mono.woff2") format("woff2");
+    font-weight: 100 800; font-style: normal; font-display: swap;
+  }
+
+  :root {
+    color-scheme: dark;
+    --black: #0A0A0C;
+    --surface: #100F0D;
+    --cream: #FCF9E8;
+    --gold: #E4B976;
+    --gold-deep: #CF9F5B;
+    --muted: rgba(252, 249, 232, 0.62);
+    --line: rgba(228, 185, 118, 0.16);
+    --line-soft: rgba(228, 185, 118, 0.10);
+    --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    --ease: cubic-bezier(.22, 1, .36, 1);
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    min-height: 100svh;
+    background: radial-gradient(120% 80% at 50% -10%, #2A2419 0%, #15130F 38%, var(--black) 78%) fixed;
+    background-color: var(--black);
+    color: var(--cream);
+    font-family: var(--sans);
+    -webkit-font-smoothing: antialiased;
+    -webkit-tap-highlight-color: transparent;
+  }
+  button { font: inherit; }
+  p { margin: 0; }
+
+  @keyframes rise { to { opacity: 1; transform: none; } }
+  .reveal { opacity: 0; transform: translateY(10px); animation: rise .6s cubic-bezier(.2, .7, .2, 1) forwards; }
+
+  main { min-height: 100svh; display: flex; justify-content: center; padding: 24px 18px 40px; }
+
+  .card {
+    width: 100%; max-width: 420px; align-self: center; position: relative;
+    border-radius: 24px; border: 1px solid var(--line); overflow: hidden;
+    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%), var(--surface);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 30px 70px -30px rgba(0,0,0,0.6);
+  }
+
+  /* ---------- round icon buttons ---------- */
+  .icon-btn {
+    width: 38px; height: 38px; border-radius: 50%; padding: 0;
+    border: 1px solid rgba(228, 185, 118, 0.24); background: rgba(10, 10, 12, 0.5);
+    color: var(--gold); display: grid; place-items: center; cursor: pointer;
+  }
+  .icon-btn svg { width: 18px; height: 18px; }
+  .hero-actions .icon-btn { transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
+  .is-flipped .hero-actions .icon-btn { background: rgba(10, 10, 12, 0.05); border-color: rgba(10, 10, 12, 0.18); color: var(--black); }
+  .is-flipped .hero-actions :focus-visible { outline-color: var(--black); }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- hero + flip ---------- */
+  .hero { position: relative; width: 100%; height: 432px; overflow: hidden; }
+  .hero-actions { position: absolute; top: 16px; right: 16px; display: flex; gap: 8px; z-index: 4; }
+  .flip { position: absolute; inset: 0; perspective: 1500px; cursor: pointer; z-index: 1; }
+  .flip-inner {
+    position: relative; width: 100%; height: 100%;
+    transform-style: preserve-3d; transition: transform .7s var(--ease);
+  }
+  .is-flipped .flip-inner { transform: rotateY(180deg); }
+  .face {
+    position: absolute; inset: 0; overflow: hidden;
+    backface-visibility: hidden; -webkit-backface-visibility: hidden;
+    /* Swap visibility at the edge-on point too: some WebKit builds let
+       video bleed through backface-visibility. */
+    transition: visibility 0s linear .09s;
+  }
+  .face-back { transform: rotateY(180deg); visibility: hidden; }
+  .is-flipped .face-front { visibility: hidden; }
+  .is-flipped .face-back { visibility: visible; }
+
+  .portrait-poster, .portrait-video {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    object-fit: cover; object-position: 50% 50%; display: block;
+  }
+  .portrait-video { opacity: 0; transition: opacity .4s ease; }
+  .portrait-video.is-playing { opacity: 1; }
+  .portrait-video::-webkit-media-controls-start-playback-button { display: none !important; -webkit-appearance: none; }
+
+  .grain {
+    position: absolute; inset: 0; pointer-events: none; opacity: 0.13; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAnIGhlaWdodD0nMTgwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+");
+  }
+  .shade {
+    position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(180deg, rgba(16,15,13,0) 38%, rgba(16,15,13,0.55) 66%, var(--surface) 100%);
+  }
+  .front-text { position: absolute; left: 26px; right: 26px; bottom: 22px; }
+  .eyebrow {
+    margin: 0 0 8px; font-family: var(--mono); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); opacity: 0.92;
+  }
+  .name {
+    margin: 0; font-weight: 500; font-size: 36px; line-height: 1.02; letter-spacing: -0.02em;
+    color: var(--cream); text-shadow: 0 2px 18px rgba(0,0,0,0.5);
+  }
+  .flip-hint {
+    position: absolute; bottom: 18px; right: 18px; z-index: 2;
+    display: flex; align-items: center; gap: 6px; padding: 4px; margin: -4px;
+    border: 0; background: none; cursor: pointer; border-radius: 6px;
+    font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(252, 249, 232, 0.7);
+  }
+  .flip-hint svg { width: 14px; height: 14px; }
+
+  .face-back {
+    background: var(--cream); color: var(--black);
+    display: flex; flex-direction: column; justify-content: center; padding: 40px 34px;
+  }
+  .back-logo { display: block; width: 150px; height: auto; margin: 0 0 26px; }
+  .back-line { margin: 0 0 16px; font-weight: 500; font-size: 30px; line-height: 1.1; letter-spacing: -0.02em; }
+  .back-body { font-size: 14.5px; line-height: 1.55; color: rgba(10, 10, 12, 0.72); }
+  .face-back .flip-hint { color: rgba(10, 10, 12, 0.58); }
+  .face-back :focus-visible { outline-color: var(--black); }
+
+  /* ---------- content ---------- */
+  .content { padding: 20px 26px 26px; }
+  .role { margin: 0 0 16px; font-size: 14px; line-height: 1.5; color: var(--muted); }
+  .role b { color: var(--cream); font-weight: 600; }
+
+  .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
+  .badge {
+    display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px;
+    font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--gold); border: 1px solid var(--line); border-radius: 999px; background: rgba(228, 185, 118, 0.05);
+  }
+  .badge::before {
+    content: ""; width: 5px; height: 5px; border-radius: 50%; flex: none;
+    background: var(--gold); box-shadow: 0 0 9px rgba(228, 185, 118, 0.85);
+  }
+
+  .save {
+    width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
+    padding: 16px 18px; border-radius: 16px; text-decoration: none; cursor: pointer;
+    font-size: 15px; font-weight: 600; letter-spacing: 0.01em; color: var(--black);
+    background: linear-gradient(180deg, var(--gold), var(--gold-deep));
+    box-shadow: 0 14px 30px -14px rgba(228, 185, 118, 0.55);
+  }
+  .save svg { width: 18px; height: 18px; }
+  .save:focus-visible { outline-color: var(--cream); }
+
+  .quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
+  .quick[hidden] { display: none; }
+  .quick a {
+    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 13px 6px;
+    border-radius: 13px; border: 1px solid var(--line); background: rgba(255,255,255,0.025);
+    color: var(--cream); text-decoration: none; font-size: 11.5px; letter-spacing: 0.02em;
+  }
+
+  .divider {
+    display: flex; align-items: center; gap: 12px; margin: 24px 2px 14px;
+    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--gold); opacity: 0.7;
+  }
+  .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: var(--line-soft); }
+
+  .links { display: flex; flex-direction: column; gap: 8px; }
+  .link {
+    display: flex; align-items: center; gap: 14px; padding: 13px 15px; border-radius: 13px;
+    border: 1px solid var(--line-soft); background: rgba(255,255,255,0.02);
+    color: var(--cream); text-decoration: none;
+  }
+  .link-icon { width: 22px; height: 22px; flex: none; color: var(--gold); display: grid; place-items: center; }
+  .link-icon svg { width: 20px; height: 20px; }
+  .link-text { display: flex; flex-direction: column; line-height: 1.25; }
+  .link-name { font-size: 14px; font-weight: 600; }
+  .link-sub { font-size: 12px; color: var(--muted); }
+  .link-arrow { margin-left: auto; color: var(--gold); opacity: 0.55; display: grid; }
+  .link-arrow svg { width: 16px; height: 16px; }
+
+  .foot { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
+  .foot img { display: block; width: 104px; height: auto; opacity: 0.9; }
+  .foot p { font-size: 11px; letter-spacing: 0.04em; color: var(--muted); }
+
+  /* ---------- QR overlay ---------- */
+  .qr {
+    position: absolute; inset: 0; z-index: 20; background: var(--surface);
+    display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px;
+    opacity: 0; visibility: hidden; transition: opacity .28s var(--ease), visibility 0s linear .28s;
+  }
+  .qr.is-open { opacity: 1; visibility: visible; transition: opacity .28s var(--ease); }
+  .qr-close { position: absolute; top: 16px; right: 16px; background: rgba(228, 185, 118, 0.06); }
+  .qr .eyebrow { margin: 0 0 22px; }
+  .qr-tile { padding: 14px; background: var(--cream); border-radius: 2px; box-shadow: 0 20px 50px -24px rgba(0,0,0,0.6); }
+  .qr-tile svg { display: block; width: 240px; height: 240px; }
+  .qr-name { margin: 24px 0 0; font-size: 21px; font-weight: 500; letter-spacing: -0.01em; color: var(--cream); }
+  .qr-caption { margin: 6px 0 0; font-size: 12px; color: var(--muted); text-align: center; }
+
+  /* ---------- toast ---------- */
+  .toast {
+    position: fixed; left: 50%; bottom: 24px; z-index: 50; transform: translate(-50%, 20px);
+    max-width: 88vw; padding: 12px 16px; border-radius: 12px; font-size: 13px; overflow-wrap: anywhere;
+    background: #17150F; color: var(--cream); border: 1px solid var(--line);
+    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7);
+    opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .22s ease;
+  }
+  .toast.is-shown { opacity: 1; transform: translate(-50%, 0); }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal { animation: none; opacity: 1; transform: none; }
+    .flip-inner, .face, .qr, .qr.is-open, .toast, .portrait-video { transition: none; }
+  }
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+
+    <!-- QR overlay -->
+    <div class="qr" id="qr" role="dialog" aria-modal="true" aria-labelledby="qr-heading">
+      <button class="icon-btn qr-close" id="qr-close" type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="eyebrow" id="qr-heading"></p>
+      <div class="qr-tile" id="qr-tile"></div>
+      <p class="qr-name" id="qr-name"></p>
+      <p class="qr-caption" id="qr-caption"></p>
+    </div>
+
+    <!-- Portrait hero (flip card) -->
+    <section class="hero reveal" id="hero">
+      <div class="hero-actions">
+        <button class="icon-btn" id="share-btn" type="button" aria-label="Share">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><path d="m8.6 13.5 6.8 4M15.4 6.5l-6.8 4"/></svg>
+        </button>
+        <button class="icon-btn" id="qr-btn" type="button" aria-label="Show QR code" aria-haspopup="dialog" aria-controls="qr">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M14 21h.01M17 21h4v-4"/></svg>
+        </button>
+      </div>
+
+      <div class="flip" id="flip">
+        <div class="flip-inner">
+          <div class="face face-front" id="front">
+            <img class="portrait-poster" id="poster" alt="" decoding="async">
+            <video class="portrait-video" id="video" muted playsinline loop preload="none"
+                   disablepictureinpicture disableremoteplayback aria-hidden="true" tabindex="-1"></video>
+            <div class="grain"></div>
+            <div class="shade"></div>
+            <div class="front-text">
+              <p class="eyebrow" id="eyebrow"></p>
+              <h1 class="name" id="name"></h1>
+            </div>
+            <button class="flip-hint" id="flip-to-back" type="button" aria-pressed="false">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg><span id="tap-label"></span>
+            </button>
+          </div>
+
+          <div class="face face-back" id="back" inert aria-hidden="true">
+            <img class="back-logo" id="back-logo" alt="">
+            <p class="back-line" id="back-line"></p>
+            <p class="back-body" id="back-body"></p>
+            <button class="flip-hint" id="flip-to-front" type="button" aria-pressed="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg><span id="tap-back-label"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="content" id="content">
+      <p class="role reveal" id="role"></p>
+      <div class="badges reveal" id="badges"></div>
+
+      <a class="save reveal" id="save" href="#">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 21l-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+        <span id="save-label"></span>
+      </a>
+
+      <div class="quick reveal" id="quick" hidden></div>
+
+      <p class="divider reveal" id="links-heading"></p>
+      <nav class="links reveal" id="links" aria-labelledby="links-heading"></nav>
+
+      <footer class="foot reveal">
+        <img id="foot-logo" alt="">
+        <p id="foot-text"></p>
+      </footer>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</main>
+
+<script>
+(function () {
+  "use strict";
+  var C = window.CARD, L = C.labels;
+  var $ = function (id) { return document.getElementById(id); };
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+  var ICONS = {
+    website: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>',
+    linkedin: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M4.98 3.5A2.5 2.5 0 1 0 5 8.5a2.5 2.5 0 0 0 0-5ZM3 9h4v12H3V9Zm6 0h3.8v1.7h.1c.5-1 1.8-2 3.7-2 4 0 4.7 2.6 4.7 5.9V21h-4v-5.5c0-1.3 0-3-1.9-3s-2.1 1.4-2.1 2.9V21H9V9Z"/></svg>',
+    instagram: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.4" cy="6.6" r="1.1" fill="currentColor" stroke="none"/></svg>',
+    x: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.2 2.5h3.3l-7.2 8.2 8.5 11.3h-6.7l-5.2-6.9-6 6.9H1.6l7.7-8.8L1 2.5h6.9l4.7 6.3 5.6-6.3Zm-1.2 17.8h1.8L7.1 4.3H5.2L17 20.3Z"/></svg>',
+    youtube: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 12s0-3.2-.4-4.7a2.5 2.5 0 0 0-1.7-1.7C19.3 5.2 12 5.2 12 5.2s-7.3 0-8.9.4A2.5 2.5 0 0 0 1.4 7.3C1 8.8 1 12 1 12s0 3.2.4 4.7a2.5 2.5 0 0 0 1.7 1.7c1.6.4 8.9.4 8.9.4s7.3 0 8.9-.4a2.5 2.5 0 0 0 1.7-1.7C23 15.2 23 12 23 12Zm-13 3.2V8.8l5.5 3.2-5.5 3.2Z"/></svg>',
+    tiktok: '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16.5 3c.3 2.1 1.5 3.6 3.5 3.9v2.6c-1.3.1-2.5-.2-3.6-.8v5.7c0 3.4-2.6 5.9-5.8 5.6-2.7-.2-4.7-2.5-4.6-5.2.1-2.8 2.5-4.9 5.3-4.7v2.7c-.4-.1-.8-.1-1.2 0-1.1.3-1.8 1.3-1.6 2.4.2 1.1 1.2 1.8 2.3 1.6 1-.2 1.7-1.1 1.7-2.2V3h3.6Z"/></svg>',
+    phone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.4-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg>',
+    mail: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>'
+  };
+  var ARROW = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8"/></svg>';
+
+  function el(tag, cls, text) {
+    var e = document.createElement(tag);
+    if (cls) e.className = cls;
+    if (text != null) e.textContent = text;
+    return e;
+  }
+  function icon(key) {
+    var s = el("span");
+    s.innerHTML = ICONS[key] || ICONS.website;
+    return s;
+  }
+  function pageUrl() { return location.href.split("#")[0]; }
+
+  // ---------- fill the card from CARD ----------
+  $("name").textContent = C.displayName;
+  $("qr-name").textContent = C.displayName;
+  $("qr-heading").textContent = L.qrHeading;
+  $("qr-caption").textContent = L.qrCaption;
+  $("tap-label").textContent = L.tap;
+  $("tap-back-label").textContent = L.tapBack;
+  $("flip-to-back").setAttribute("aria-label", L.tap + " to flip the card");
+  $("save-label").textContent = L.save;
+  $("links-heading").textContent = L.linksHeading;
+
+  var poster = $("poster");
+  poster.src = C.media.poster;
+  poster.alt = C.displayName;
+
+  $("back-logo").src = C.back.logo;
+  $("back-logo").alt = C.org;
+  $("back-line").textContent = C.back.line;
+  $("back-body").textContent = C.back.body;
+
+  var role = $("role");
+  C.roleLine.forEach(function (part, i) {
+    if (i === 0) role.appendChild(el("b", null, part));
+    else role.appendChild(document.createTextNode(" · " + part));
+  });
+
+  C.badges.forEach(function (b) { $("badges").appendChild(el("span", "badge", b)); });
+  if (!C.badges.length) $("badges").remove();
+
+  var links = C.links.filter(function (l) { return l.url && l.url.trim(); });
+  links.forEach(function (l) {
+    var a = el("a", "link");
+    a.href = l.url; a.target = "_blank"; a.rel = "noopener";
+    var ic = icon(l.icon); ic.className = "link-icon";
+    var text = el("span", "link-text");
+    text.appendChild(el("span", "link-name", l.name));
+    if (l.sub) text.appendChild(el("span", "link-sub", l.sub));
+    var arrow = el("span", "link-arrow"); arrow.innerHTML = ARROW;
+    a.append(ic, text, arrow);
+    $("links").appendChild(a);
+  });
+  if (!links.length) { $("links-heading").remove(); $("links").remove(); }
+
+  // Quick-action tiles: only actions that resolve to a real target are shown.
+  function resolveAction(key) {
+    if (key === "call" && C.phone) return { ic: "phone", label: "Call", href: "tel:" + C.phone.replace(/\s/g, "") };
+    if (key === "email" && C.email) return { ic: "mail", label: "Email", href: "mailto:" + C.email };
+    var l = links.find(function (x) { return x.icon === key; });
+    return l ? { ic: l.icon, label: l.name, href: l.url } : null;
+  }
+  var quick = (C.quickActions || []).map(resolveAction).filter(Boolean);
+  quick.forEach(function (q) {
+    var a = el("a"); a.href = q.href;
+    if (/^https?:/.test(q.href)) { a.target = "_blank"; a.rel = "noopener"; }
+    a.append(icon(q.ic), el("span", null, q.label));
+    $("quick").appendChild(a);
+  });
+  if (quick.length) $("quick").hidden = false; else $("quick").remove();
+
+  $("foot-logo").src = C.footer.logo;
+  $("foot-logo").alt = C.org;
+  $("foot-text").textContent = C.footer.text;
+
+  // ---------- live local time ----------
+  var timeFmt = new Intl.DateTimeFormat("en-US", { timeZone: C.place.timeZone, hour: "numeric", minute: "2-digit" });
+  function tick() { $("eyebrow").textContent = C.place.label + " · " + timeFmt.format(new Date()); }
+  tick();
+  setInterval(tick, 15000);
+
+  // ---------- hero video ----------
+  var video = $("video"), flipped = false;
+  video.muted = true;
+  video.addEventListener("playing", function () { video.classList.add("is-playing"); });
+  function playVideo() {
+    if (reduceMotion.matches || flipped) return;
+    if (!video.getAttribute("src")) { video.preload = "auto"; video.src = C.media.video; }
+    var p = video.play();
+    if (p && p.catch) p.catch(function () { /* autoplay blocked (e.g. Low Power Mode): poster stays */ });
+  }
+  function pauseVideo() { if (!video.paused) video.pause(); }
+  function syncMotion() {
+    if (reduceMotion.matches) { pauseVideo(); video.classList.remove("is-playing"); }
+    else playVideo();
+  }
+  if (reduceMotion.addEventListener) reduceMotion.addEventListener("change", syncMotion);
+  syncMotion();
+
+  // ---------- flip ----------
+  var hero = $("hero"), front = $("front"), back = $("back");
+  function setFlipped(next) {
+    var hintFocused = document.activeElement && document.activeElement.classList.contains("flip-hint");
+    flipped = next;
+    hero.classList.toggle("is-flipped", flipped);
+    front.inert = flipped; back.inert = !flipped;
+    front.setAttribute("aria-hidden", String(flipped));
+    back.setAttribute("aria-hidden", String(!flipped));
+    if (flipped) pauseVideo(); else playVideo();
+    if (hintFocused) {
+      var target = flipped ? $("flip-to-front") : $("flip-to-back");
+      setTimeout(function () { target.focus({ preventScroll: true }); }, reduceMotion.matches ? 0 : 120);
+    }
+  }
+  $("flip").addEventListener("click", function () { setFlipped(!flipped); });
+
+  // ---------- toast ----------
+  var toastTimer;
+  function toast(msg) {
+    var t = $("toast");
+    t.textContent = msg;
+    t.classList.add("is-shown");
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function () { t.classList.remove("is-shown"); }, 3200);
+  }
+
+  // ---------- share ----------
+  function legacyCopy(text) {
+    var ta = el("textarea"); ta.value = text;
+    ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+    document.body.appendChild(ta); ta.select();
+    var ok = false;
+    try { ok = document.execCommand("copy"); } catch (e) {}
+    ta.remove();
+    return ok;
+  }
+  function copyLink(url) {
+    if (navigator.clipboard && window.isSecureContext) {
+      return navigator.clipboard.writeText(url).then(function () { toast(L.copied); }, function () {
+        toast(legacyCopy(url) ? L.copied : url);
+      });
+    }
+    toast(legacyCopy(url) ? L.copied : url);
+  }
+  $("share-btn").addEventListener("click", function () {
+    var url = pageUrl();
+    if (navigator.share) {
+      navigator.share({ title: C.share.title, text: C.share.text, url: url }).catch(function (e) {
+        if (!e || e.name !== "AbortError") copyLink(url); // AbortError = user closed the sheet
+      });
+    } else {
+      copyLink(url);
+    }
+  });
+
+  // ---------- QR ----------
+  var qr = $("qr"), content = $("content"), qrOpen = false;
+  function qrSvg(text) {
+    if (window.qrcode.stringToBytesFuncs) window.qrcode.stringToBytes = window.qrcode.stringToBytesFuncs["UTF-8"];
+    var q = window.qrcode(0, "M");
+    q.addData(text);
+    q.make();
+    var n = q.getModuleCount(), d = "";
+    for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += "M" + c + " " + r + "h1v1h-1z";
+    // 2-module margin inside the 14px cream tile ≈ the 4-module quiet zone scanners want.
+    return '<svg viewBox="-2 -2 ' + (n + 4) + " " + (n + 4) + '" shape-rendering="crispEdges" role="img" aria-label="QR code linking to this page"><path fill="#0A0A0C" d="' + d + '"/></svg>';
+  }
+  function setQR(open) {
+    qrOpen = open;
+    if (open) $("qr-tile").innerHTML = qrSvg(pageUrl());
+    qr.classList.toggle("is-open", open);
+    hero.inert = open; content.inert = open;
+    if (open) $("qr-close").focus({ preventScroll: true });
+    else $("qr-btn").focus({ preventScroll: true });
+  }
+  $("qr-btn").addEventListener("click", function () { setQR(true); });
+  $("qr-close").addEventListener("click", function () { setQR(false); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape" && qrOpen) setQR(false); });
+
+  // ---------- save contact (vCard 3.0) ----------
+  function esc(v) { return String(v).replace(/\\/g, "\\\\").replace(/\r?\n/g, "\\n").replace(/,/g, "\\,").replace(/;/g, "\\;"); }
+  function fold(line) {
+    if (line.length <= 75) return line;
+    var out = line.slice(0, 75), rest = line.slice(75);
+    while (rest.length) { out += "\r\n " + rest.slice(0, 74); rest = rest.slice(74); }
+    return out;
+  }
+  function buildVCard(photoB64) {
+    var lines = [
+      "BEGIN:VCARD", "VERSION:3.0",
+      "N:" + esc(C.lastName) + ";" + esc(C.firstName) + ";;;",
+      "FN:" + esc(C.firstName + " " + C.lastName)
+    ];
+    if (C.nickname) lines.push("NICKNAME:" + esc(C.nickname));
+    if (C.org) lines.push("ORG:" + esc(C.org));
+    if (C.title) lines.push("TITLE:" + esc(C.title));
+    if (C.phone) lines.push("TEL;TYPE=CELL,VOICE:" + C.phone);
+    if (C.email) lines.push("EMAIL;TYPE=INTERNET,WORK:" + C.email);
+    links.forEach(function (l, i) {
+      lines.push("item" + (i + 1) + ".URL:" + l.url);
+      lines.push("item" + (i + 1) + ".X-ABLabel:" + esc(l.name));
+    });
+    if (photoB64) lines.push("PHOTO;ENCODING=b;TYPE=JPEG:" + photoB64);
+    lines.push("END:VCARD");
+    return lines.map(fold).join("\r\n") + "\r\n";
+  }
+  var save = $("save"), vcfUrl = null;
+  function setVCard(photoB64) {
+    var next = URL.createObjectURL(new Blob([buildVCard(photoB64)], { type: "text/vcard;charset=utf-8" }));
+    if (vcfUrl) URL.revokeObjectURL(vcfUrl);
+    vcfUrl = next;
+    save.href = vcfUrl;
+  }
+  save.download = C.displayName + ".vcf";
+  try { setVCard(null); } catch (e) { save.removeAttribute("href"); }
+  save.addEventListener("click", function () {
+    if (!save.getAttribute("href") || save.getAttribute("href") === "#") { toast(L.saveFailed); return; }
+    setTimeout(function () { toast(L.saved); }, 300);
+  });
+  // Add the photo once it's here, so the tap itself stays a plain link click.
+  fetch(C.media.contactPhoto)
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.blob(); })
+    .then(function (b) {
+      return new Promise(function (res, rej) {
+        var fr = new FileReader();
+        fr.onload = function () { res(String(fr.result).split(",")[1]); };
+        fr.onerror = rej;
+        fr.readAsDataURL(b);
+      });
+    })
+    .then(setVCard)
+    .catch(function () { /* contact saves without a photo */ });
+})();
+</script>
+</body>
+</html>
