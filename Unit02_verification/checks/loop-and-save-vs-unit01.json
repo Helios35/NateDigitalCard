@@ -1,0 +1,38 @@
+{
+ "unit01-main": {
+  "loop": {
+   "wrapGapsMs": [
+    54,
+    63,
+    46
+   ],
+   "medianStepMs": 42,
+   "p99StepMs": 42
+  },
+  "downloadEvents": [
+   "completed"
+  ],
+  "files": [
+   "Nate Ivy.vcf"
+  ],
+  "consoleErrors": []
+ },
+ "unit02-branch": {
+  "loop": {
+   "wrapGapsMs": [
+    87,
+    54,
+    54
+   ],
+   "medianStepMs": 42,
+   "p99StepMs": 42
+  },
+  "downloadEvents": [
+   "completed"
+  ],
+  "files": [
+   "Nate Ivy.vcf"
+  ],
+  "consoleErrors": []
+ }
+}

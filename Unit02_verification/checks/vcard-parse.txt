@@ -1,0 +1,5 @@
+bytes 57496 | CRLF only: True | max line 75
+N: Nathan / Ivy | FN: Nathan Ivy | NICKNAME: Nate | ORG: ['NextSketch'] | TITLE: Lead Product Architect & CEO
+EMAIL: nate@nextsketch.com ['INTERNET', 'WORK'] | TEL: False | ADR: False
+URLs: ['https://www.nextsketch.com', 'https://www.linkedin.com/in/nathan-ivy']
+PHOTO: JPEG (480, 480) | identical to media/contact.jpg: True

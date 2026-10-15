@@ -1,0 +1,13 @@
+view     target    floor     min@p99    min@max worst state  verdict
+desktop  eyebrow   4.5         5.52:1      5.32:1 t4.125       PASS  (41 states)
+desktop  hint      4.5         5.31:1      5.26:1 t1.625       PASS  (41 states)
+desktop  hintIcon  3.0         5.26:1      5.26:1 t0.000       PASS  (41 states)
+desktop  name      4.5        13.67:1     13.39:1 t0.000       PASS  (41 states)
+desktop  qrbtn     3.0        14.17:1     14.04:1 t0.500       PASS  (41 states)
+desktop  share     3.0        14.03:1     14.03:1 poster       PASS  (41 states)
+phone    eyebrow   4.5         5.52:1      5.25:1 t1.375       PASS  (41 states)
+phone    hint      4.5         5.30:1      5.26:1 t0.000       PASS  (41 states)
+phone    hintIcon  3.0         5.32:1      5.32:1 t2.125       PASS  (41 states)
+phone    name      4.5        13.67:1     13.39:1 t0.000       PASS  (41 states)
+phone    qrbtn     3.0        14.03:1     13.99:1 poster       PASS  (41 states)
+phone    share     3.0        13.85:1     13.76:1 poster       PASS  (41 states)

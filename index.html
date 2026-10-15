@@ -13,11 +13,11 @@
      read them without running any script.)
      ============================================================ -->
 <title>Nate Ivy · NextSketch</title>
-<meta name="description" content="Lead Product Architect &amp; CEO, NextSketch. From idea to production.">
+<meta name="description" content="Lead Product Architect &amp; CEO, NextSketch. Agentic systems and digital products that work in production.">
 <meta property="og:title" content="Nate Ivy">
-<meta property="og:description" content="Lead Product Architect &amp; CEO, NextSketch. From idea to production.">
+<meta property="og:description" content="Lead Product Architect &amp; CEO, NextSketch. Agentic systems and digital products that work in production.">
 <meta property="og:type" content="profile">
-<meta name="theme-color" content="#0A0A0C">
+<meta name="theme-color" content="#101010">
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
 <script>
@@ -36,13 +36,15 @@ window.CARD = {
 
   // Line under the hero. First item is bold; any others follow as " · item".
   roleLine: ["Lead Product Architect & CEO"],
-  badges: ["Product Development", "AI Integrations"],
+  badges: ["Agentic Systems", "Digital Products"],
 
-  // Back of the flip (the cream side).
+  // Back of the flip. lineAccent is the part of the line shown in coral;
+  // it must appear in line word for word. Empty = the whole line in linen.
   back: {
-    logo: "brand/logo-dark.svg",
-    line: "From idea to production.",
-    body: "You’re not hiring a vendor. You’re gaining a product partner."
+    logo: "brand/logo-linen.svg",
+    line: "We build agentic systems and digital products that work in production",
+    lineAccent: "work in production",
+    body: "Software your business runs on that we maintain"
   },
 
   // Link list. Every link here also goes into the saved contact.
@@ -59,7 +61,7 @@ window.CARD = {
   // Empty = no tile row.
   quickActions: [],
 
-  footer: { logo: "brand/logo-cream.svg", text: "© 2026 Next Sketch LLC" },
+  footer: { logo: "brand/logo-linen.svg", text: "© 2026 Next Sketch LLC" },
 
   media: {
     video: "media/portrait.mp4",      // silent, seamless loop
@@ -92,14 +94,20 @@ window.CARD = {
     document.head.appendChild(l);
   })();
 </script>
-<link rel="preload" href="fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/playfair-display.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <script src="vendor/qrcode.js" defer></script>
 
 <style>
   @font-face {
-    font-family: "Space Grotesk";
-    src: url("fonts/space-grotesk.woff2") format("woff2");
-    font-weight: 300 700; font-style: normal; font-display: swap;
+    font-family: "Inter";
+    src: url("fonts/inter.woff2") format("woff2");
+    font-weight: 100 900; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: "Playfair Display";
+    src: url("fonts/playfair-display.woff2") format("woff2");
+    font-weight: 400 900; font-style: normal; font-display: swap;
   }
   @font-face {
     font-family: "JetBrains Mono";
@@ -109,26 +117,47 @@ window.CARD = {
 
   :root {
     color-scheme: dark;
-    --black: #0A0A0C;
-    --surface: #100F0D;
-    --cream: #FCF9E8;
-    --gold: #E4B976;
-    --gold-deep: #CF9F5B;
-    --muted: rgba(252, 249, 232, 0.62);
-    --line: rgba(228, 185, 118, 0.16);
-    --line-soft: rgba(228, 185, 118, 0.10);
-    --sans: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    /* Fin's dark set (zen-linen-fin.css, .dark). These are the card's only colours. */
+    --sidebar: #101010;            /* fin's darkest step: the page behind the card */
+    --background: #141414;         /* the card itself, and the QR sheet */
+    --foreground: #E8E3DA;         /* linen */
+    --card: #1C1C1C;               /* surfaces on the card: link rows, flip panel, toast */
+    --primary: #D1CFC0;            /* stone */
+    --primary-foreground: #363636;
+    --secondary: #222222;
+    --muted: #2A2A2A;
+    --muted-foreground: #8E8A83;
+    --accent: #363636;
+    --border: #2C2C2C;
+    --ring: #D1CFC0;
+    --brand: #F26A4B;              /* coral: the one accent */
+
+    /* Fin's radius scale: every step derives from one token (app/globals.css). */
+    --radius: 0.5rem;
+    --radius-md: calc(var(--radius) * 0.8);
+    --radius-lg: var(--radius);
+    --radius-xl: calc(var(--radius) * 1.4);
+
+    /* Fin's soft shadow scale. Near-invisible in dark on purpose: the border separates. */
+    --shadow-xs: 0 1px 4px 1px rgb(0 0 0 / 0.04);
+    --shadow-lg: 0 8px 30px 5px rgb(0 0 0 / 0.06);
+    --shadow-xl: 0 14px 44px 7px rgb(0 0 0 / 0.07);
+
+    --sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    --serif: "Playfair Display", Georgia, "Times New Roman", serif;
     --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
-    --ease: cubic-bezier(.22, 1, .36, 1);
+
+    --ease: cubic-bezier(.22, 1, .36, 1);  /* the flip (Unit 01 timing) */
+    --fast: 150ms;                         /* every state change: fin §8, under 200ms */
   }
 
   * { box-sizing: border-box; }
   html, body { margin: 0; }
+  html.is-locked { overflow: hidden; }
   body {
     min-height: 100svh;
-    background: radial-gradient(120% 80% at 50% -10%, #2A2419 0%, #15130F 38%, var(--black) 78%) fixed;
-    background-color: var(--black);
-    color: var(--cream);
+    background: var(--sidebar);
+    color: var(--foreground);
     font-family: var(--sans);
     -webkit-font-smoothing: antialiased;
     -webkit-tap-highlight-color: transparent;
@@ -136,29 +165,35 @@ window.CARD = {
   button { font: inherit; }
   p { margin: 0; }
 
-  @keyframes rise { to { opacity: 1; transform: none; } }
-  .reveal { opacity: 0; transform: translateY(10px); animation: rise .6s cubic-bezier(.2, .7, .2, 1) forwards; }
+  /* Entrance (Unit 01 timing). Fills backwards only, so once it ends it lets go
+     of opacity and a component's own states (disabled) apply again. */
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } }
+  .reveal { animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards; }
 
   main { min-height: 100svh; display: flex; justify-content: center; padding: 24px 18px 40px; }
 
   .card {
     width: 100%; max-width: 420px; align-self: center; position: relative;
-    border-radius: 24px; border: 1px solid var(--line); overflow: hidden;
-    background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0) 40%), var(--surface);
-    box-shadow: 0 1px 0 rgba(255,255,255,0.05) inset, 0 30px 70px -30px rgba(0,0,0,0.6);
+    border-radius: var(--radius-xl); border: 1px solid var(--border); overflow: hidden;
+    background: var(--background); box-shadow: var(--shadow-xl);
   }
 
-  /* ---------- round icon buttons ---------- */
-  .icon-btn {
-    width: 38px; height: 38px; border-radius: 50%; padding: 0;
-    border: 1px solid rgba(228, 185, 118, 0.24); background: rgba(10, 10, 12, 0.5);
-    color: var(--gold); display: grid; place-items: center; cursor: pointer;
+  /* ---------- interaction: fin's INTERACTIVE base, on every control ---------- */
+  .icon-btn, .flip-hint, .save, .link, .quick a, .qr-close {
+    cursor: pointer; outline: none; touch-action: manipulation;
+    transition: color var(--fast), background-color var(--fast), border-color var(--fast), opacity var(--fast);
   }
-  .icon-btn svg { width: 18px; height: 18px; }
-  .hero-actions .icon-btn { transition: background-color .3s ease, border-color .3s ease, color .3s ease; }
-  .is-flipped .hero-actions .icon-btn { background: rgba(10, 10, 12, 0.05); border-color: rgba(10, 10, 12, 0.18); color: var(--black); }
-  .is-flipped .hero-actions :focus-visible { outline-color: var(--black); }
-  :focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+
+  /* ---------- icon buttons: button.tsx outline variant, icon size ---------- */
+  .icon-btn {
+    width: 36px; height: 36px; padding: 0; display: grid; place-items: center;
+    border-radius: var(--radius-md); border: 1px solid var(--border);
+    background: rgb(44 44 44 / 0.3);   /* dark:bg-input/30 */
+    color: var(--foreground); box-shadow: var(--shadow-xs);
+  }
+  .icon-btn svg { width: 16px; height: 16px; }
+  .icon-btn:active { background: var(--muted); }
+  .icon-btn:disabled { pointer-events: none; opacity: .5; }
 
   /* ---------- hero + flip ---------- */
   .hero { position: relative; width: 100%; height: 432px; overflow: hidden; }
@@ -192,141 +227,195 @@ window.CARD = {
     position: absolute; inset: 0; pointer-events: none; opacity: 0.13; mix-blend-mode: overlay;
     background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAnIGhlaWdodD0nMTgwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+");
   }
+  /* The clip fades into the card's own surface (--background) under the name. */
   .shade {
     position: absolute; inset: 0; pointer-events: none;
-    background: linear-gradient(180deg, rgba(16,15,13,0) 38%, rgba(16,15,13,0.55) 66%, var(--surface) 100%);
+    background: linear-gradient(180deg, rgb(20 20 20 / 0) 34%, rgb(20 20 20 / 0.6) 60%, rgb(20 20 20 / 0.9) 76%, var(--background) 100%);
   }
   .front-text { position: absolute; left: 26px; right: 26px; bottom: 22px; }
   .eyebrow {
-    margin: 0 0 8px; font-family: var(--mono); font-size: 11px; font-weight: 500;
-    letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); opacity: 0.92;
+    margin: 0 0 10px; font-family: var(--mono); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--brand);
   }
   .name {
-    margin: 0; font-weight: 500; font-size: 36px; line-height: 1.02; letter-spacing: -0.02em;
-    color: var(--cream); text-shadow: 0 2px 18px rgba(0,0,0,0.5);
+    margin: 0; font-family: var(--serif); font-weight: 700; font-size: 38px; line-height: 1.08; letter-spacing: -0.025em;
+    color: var(--foreground); text-shadow: 0 2px 18px rgb(0 0 0 / 0.5);
   }
+
+  /* "Tap" hint: button.tsx ghost variant, on fin's 11px label step. */
   .flip-hint {
-    position: absolute; bottom: 18px; right: 18px; z-index: 2;
-    display: flex; align-items: center; gap: 6px; padding: 4px; margin: -4px;
-    border: 0; background: none; cursor: pointer; border-radius: 6px;
-    font-family: var(--mono); font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase;
-    color: rgba(252, 249, 232, 0.7);
+    position: absolute; bottom: 14px; right: 14px; z-index: 2;
+    display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 10px;
+    border: 1px solid transparent; border-radius: var(--radius-md); background: none;
+    font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted-foreground);
   }
   .flip-hint svg { width: 14px; height: 14px; }
+  .flip-hint:active { background: var(--accent); color: var(--foreground); }
 
+  /* Back of the flip: fin's card surface, with the hairline that separates it from the card. */
   .face-back {
-    background: var(--cream); color: var(--black);
-    display: flex; flex-direction: column; justify-content: center; padding: 40px 34px;
+    background: var(--card); color: var(--foreground); border-bottom: 1px solid var(--border);
+    display: flex; flex-direction: column; justify-content: center; padding: 40px 32px 52px;
   }
-  .back-logo { display: block; width: 150px; height: auto; margin: 0 0 26px; }
-  .back-line { margin: 0 0 16px; font-weight: 500; font-size: 30px; line-height: 1.1; letter-spacing: -0.02em; }
-  .back-body { font-size: 14.5px; line-height: 1.55; color: rgba(10, 10, 12, 0.72); }
-  .face-back .flip-hint { color: rgba(10, 10, 12, 0.58); }
-  .face-back :focus-visible { outline-color: var(--black); }
+  .back-logo { display: block; width: 140px; height: auto; margin: 0 0 24px; }
+  .back-line {
+    margin: 0 0 14px; font-family: var(--serif); font-weight: 700; font-size: 27px;
+    line-height: 1.14; letter-spacing: -0.02em; text-wrap: balance;
+  }
+  .back-line .accent { color: var(--brand); }
+  .back-body { font-size: 14px; line-height: 1.55; color: var(--muted-foreground); }
 
   /* ---------- content ---------- */
   .content { padding: 20px 26px 26px; }
-  .role { margin: 0 0 16px; font-size: 14px; line-height: 1.5; color: var(--muted); }
-  .role b { color: var(--cream); font-weight: 600; }
+  .role { margin: 0 0 16px; font-size: 14px; line-height: 1.5; color: var(--muted-foreground); }
+  .role b { color: var(--foreground); font-weight: 600; }
 
+  /* Badges: no fin equivalent. Fin's pill shape on its secondary surface, its 11px
+     label step, and the site's coral diamond as the marker. */
   .badges { display: flex; flex-wrap: wrap; gap: 8px; margin: 0 0 22px; }
   .badge {
-    display: inline-flex; align-items: center; gap: 9px; padding: 7px 14px;
-    font-family: var(--mono); font-size: 10.5px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
-    color: var(--gold); border: 1px solid var(--line); border-radius: 999px; background: rgba(228, 185, 118, 0.05);
+    display: inline-flex; align-items: center; gap: 8px; padding: 6px 12px;
+    font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--foreground); border: 1px solid var(--border); border-radius: 999px; background: var(--secondary);
   }
   .badge::before {
-    content: ""; width: 5px; height: 5px; border-radius: 50%; flex: none;
-    background: var(--gold); box-shadow: 0 0 9px rgba(228, 185, 118, 0.85);
+    content: ""; width: 6px; height: 6px; flex: none; transform: rotate(45deg); background: var(--brand);
   }
 
+  /* Save: button.tsx default (primary) variant. */
   .save {
-    width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;
-    padding: 16px 18px; border-radius: 16px; text-decoration: none; cursor: pointer;
-    font-size: 15px; font-weight: 600; letter-spacing: 0.01em; color: var(--black);
-    background: linear-gradient(180deg, var(--gold), var(--gold-deep));
-    box-shadow: 0 14px 30px -14px rgba(228, 185, 118, 0.55);
+    width: 100%; height: 48px; display: flex; align-items: center; justify-content: center; gap: 8px;
+    padding: 0 24px; border: 0; border-radius: var(--radius-md); text-decoration: none;
+    font-size: 16px; font-weight: 500; color: var(--primary-foreground); background: var(--primary);
   }
-  .save svg { width: 18px; height: 18px; }
-  .save:focus-visible { outline-color: var(--cream); }
+  .save svg { width: 16px; height: 16px; flex: none; }
+  .save:active { background: rgb(209 207 192 / 0.8); }
+  .save:not([href]) { opacity: .5; cursor: default; }
 
+  /* Quick-action tiles (off until P2): fin's card surface, same states as the link rows. */
   .quick { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-top: 8px; }
   .quick[hidden] { display: none; }
   .quick a {
-    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 13px 6px;
-    border-radius: 13px; border: 1px solid var(--line); background: rgba(255,255,255,0.025);
-    color: var(--cream); text-decoration: none; font-size: 11.5px; letter-spacing: 0.02em;
+    display: flex; flex-direction: column; align-items: center; gap: 6px; padding: 12px 6px;
+    border-radius: var(--radius-lg); border: 1px solid var(--border); background: var(--card);
+    color: var(--foreground); text-decoration: none; font-size: 12px; font-weight: 500;
   }
+  .quick a svg { width: 18px; height: 18px; color: var(--brand); }
+  .quick a:active { background: var(--muted); }
 
   .divider {
     display: flex; align-items: center; gap: 12px; margin: 24px 2px 14px;
-    font-family: var(--mono); font-size: 10.5px; letter-spacing: 0.22em; text-transform: uppercase;
-    color: var(--gold); opacity: 0.7;
+    font-family: var(--mono); font-size: 11px; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--muted-foreground);
   }
-  .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: var(--line-soft); }
+  .divider::before, .divider::after { content: ""; height: 1px; flex: 1; background: var(--border); }
 
+  /* Link rows: fin's card surface (card fill, border hairline, radius-lg). */
   .links { display: flex; flex-direction: column; gap: 8px; }
   .link {
-    display: flex; align-items: center; gap: 14px; padding: 13px 15px; border-radius: 13px;
-    border: 1px solid var(--line-soft); background: rgba(255,255,255,0.02);
-    color: var(--cream); text-decoration: none;
+    display: flex; align-items: center; gap: 12px; padding: 12px 16px; border-radius: var(--radius-lg);
+    border: 1px solid var(--border); background: var(--card);
+    color: var(--foreground); text-decoration: none;
   }
-  .link-icon { width: 22px; height: 22px; flex: none; color: var(--gold); display: grid; place-items: center; }
+  .link-icon { width: 22px; height: 22px; flex: none; color: var(--brand); display: grid; place-items: center; }
   .link-icon svg { width: 20px; height: 20px; }
-  .link-text { display: flex; flex-direction: column; line-height: 1.25; }
-  .link-name { font-size: 14px; font-weight: 600; }
-  .link-sub { font-size: 12px; color: var(--muted); }
-  .link-arrow { margin-left: auto; color: var(--gold); opacity: 0.55; display: grid; }
+  .link-text { display: flex; flex-direction: column; gap: 2px; line-height: 1.25; }
+  .link-name { font-size: 14px; font-weight: 500; }
+  .link-sub { font-size: 12px; color: var(--muted-foreground); }
+  .link-arrow { margin-left: auto; color: var(--muted-foreground); display: grid; transition: color var(--fast); }
   .link-arrow svg { width: 16px; height: 16px; }
+  /* Pressed: muted text would be 4.2:1 on --muted, so it lifts to linen. */
+  .link:active { background: var(--muted); border-color: var(--accent); }
+  .link:active .link-sub, .link:active .link-arrow { color: var(--foreground); }
 
   .foot { margin-top: 26px; display: flex; flex-direction: column; align-items: center; gap: 10px; }
-  .foot img { display: block; width: 104px; height: auto; opacity: 0.9; }
-  .foot p { font-size: 11px; letter-spacing: 0.04em; color: var(--muted); }
+  .foot img { display: block; width: 104px; height: auto; }
+  .foot p { font-size: 11px; letter-spacing: 0.04em; color: var(--muted-foreground); }
 
-  /* ---------- QR overlay ---------- */
-  .qr {
-    position: absolute; inset: 0; z-index: 20; background: var(--surface);
-    display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 32px;
-    opacity: 0; visibility: hidden; transition: opacity .28s var(--ease), visibility 0s linear .28s;
+  /* ---------- hover: only where there is a pointer that hovers, so it never sticks after a tap ---------- */
+  @media (hover: hover) {
+    .icon-btn:hover { background: rgb(44 44 44 / 0.5); }   /* dark:hover:bg-input/50 */
+    .icon-btn:active { background: var(--muted); }
+    .flip-hint:hover { background: rgb(54 54 54 / 0.5); color: var(--foreground); }   /* dark:hover:bg-accent/50 */
+    .flip-hint:active { background: var(--accent); }
+    .save:hover { background: rgb(209 207 192 / 0.9); }   /* hover:bg-primary/90 */
+    .save:active { background: rgb(209 207 192 / 0.8); }
+    .link:hover, .quick a:hover { background: var(--secondary); border-color: var(--accent); }
+    .link:hover .link-arrow { color: var(--foreground); }
+    .link:active, .quick a:active { background: var(--muted); }
+    .qr-close:hover { opacity: 1; }
   }
-  .qr.is-open { opacity: 1; visibility: visible; transition: opacity .28s var(--ease); }
-  .qr-close { position: absolute; top: 16px; right: 16px; background: rgba(228, 185, 118, 0.06); }
-  .qr .eyebrow { margin: 0 0 22px; }
-  .qr-tile { padding: 14px; background: var(--cream); border-radius: 2px; box-shadow: 0 20px 50px -24px rgba(0,0,0,0.6); }
-  .qr-tile svg { display: block; width: 240px; height: 240px; }
-  .qr-name { margin: 24px 0 0; font-size: 21px; font-weight: 500; letter-spacing: -0.01em; color: var(--cream); }
-  .qr-caption { margin: 6px 0 0; font-size: 12px; color: var(--muted); text-align: center; }
 
-  /* ---------- toast ---------- */
+  /* ---------- focus: fin's ring. --ring at full opacity, 3px, plus border-color. Never removed. ---------- */
+  :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); }
+  .icon-btn:focus-visible, .flip-hint:focus-visible, .link:focus-visible, .quick a:focus-visible, .qr-close:focus-visible {
+    border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring);
+  }
+  .qr-close:focus-visible { opacity: 1; }
+  /* On the stone button a flush ring would merge into the fill; a 2px gap keeps it a ring. */
+  .save:focus-visible { box-shadow: 0 0 0 2px var(--background), 0 0 0 5px var(--ring); }
+  @media (forced-colors: active) {
+    :focus-visible { outline: 2px solid; outline-offset: 2px; }
+  }
+
+  /* ---------- touch floor: fin §9.6, 44px where the pointer is a finger ---------- */
+  @media (pointer: coarse) {
+    .icon-btn { width: 44px; height: 44px; }
+    .flip-hint { height: 44px; bottom: 8px; right: 8px; padding: 0 14px; }
+    .qr-close { width: 44px; height: 44px; top: 8px; right: 8px; }
+  }
+
+  /* ---------- QR sheet: dialog.tsx (overlay, background surface, border, radius-lg, close) ---------- */
+  .qr {
+    position: fixed; inset: 0; z-index: 50; display: grid; place-items: center; padding: 16px;
+    opacity: 0; visibility: hidden; transition: opacity var(--fast), visibility 0s linear var(--fast);
+  }
+  .qr.is-open { opacity: 1; visibility: visible; transition: opacity var(--fast); }
+  .qr-overlay { position: absolute; inset: 0; background: rgb(0 0 0 / 0.5); }
+  .qr-panel {
+    position: relative; width: 100%; max-width: 22rem; display: flex; flex-direction: column; align-items: center;
+    padding: 24px; border: 1px solid var(--border); border-radius: var(--radius-lg);
+    background: var(--background); box-shadow: var(--shadow-lg);
+    transform: scale(.95); transition: transform var(--fast);
+  }
+  .qr.is-open .qr-panel { transform: none; }
+  .qr-close {
+    position: absolute; top: 16px; right: 16px; width: 28px; height: 28px; padding: 0;
+    display: grid; place-items: center; border: 1px solid transparent; border-radius: var(--radius-md);
+    background: none; color: var(--foreground); opacity: .7;
+  }
+  .qr-close svg { width: 16px; height: 16px; }
+  .qr-close:active { opacity: 1; background: var(--muted); }
+  .qr-heading {
+    margin: 4px 0 20px; font-family: var(--mono); font-size: 11px; font-weight: 500;
+    letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted-foreground);
+  }
+  /* A light tile behind dark modules, so it still scans: linen under --background. */
+  .qr-tile { padding: 14px; background: var(--foreground); color: var(--background); border-radius: var(--radius-md); }
+  .qr-tile svg { display: block; width: 240px; height: 240px; }
+  .qr-name { margin: 20px 0 0; font-family: var(--serif); font-size: 24px; font-weight: 700; letter-spacing: -0.02em; color: var(--foreground); }
+  .qr-caption { margin: 6px 0 0; font-size: 14px; color: var(--muted-foreground); text-align: center; }
+
+  /* ---------- toast: fin's card surface ---------- */
   .toast {
-    position: fixed; left: 50%; bottom: 24px; z-index: 50; transform: translate(-50%, 20px);
-    max-width: 88vw; padding: 12px 16px; border-radius: 12px; font-size: 13px; overflow-wrap: anywhere;
-    background: #17150F; color: var(--cream); border: 1px solid var(--line);
-    box-shadow: 0 20px 50px -20px rgba(0,0,0,0.7);
-    opacity: 0; pointer-events: none; transition: opacity .22s ease, transform .22s ease;
+    position: fixed; left: 50%; bottom: 24px; z-index: 60; transform: translate(-50%, 8px);
+    max-width: 88vw; padding: 12px 16px; border-radius: var(--radius-lg); font-size: 14px; overflow-wrap: anywhere;
+    background: var(--card); color: var(--foreground); border: 1px solid var(--border); box-shadow: var(--shadow-lg);
+    opacity: 0; pointer-events: none; transition: opacity var(--fast), transform var(--fast);
   }
   .toast.is-shown { opacity: 1; transform: translate(-50%, 0); }
 
+  /* fin §8: reduced motion removes all of it, no exceptions. */
   @media (prefers-reduced-motion: reduce) {
-    .reveal { animation: none; opacity: 1; transform: none; }
-    .flip-inner, .face, .qr, .qr.is-open, .toast, .portrait-video { transition: none; }
+    *, ::before, ::after { transition-duration: 0s !important; transition-delay: 0s !important; }
+    .reveal { animation: none; }
   }
 </style>
 </head>
 <body>
 <main>
   <div class="card">
-
-    <!-- QR overlay -->
-    <div class="qr" id="qr" role="dialog" aria-modal="true" aria-labelledby="qr-heading">
-      <button class="icon-btn qr-close" id="qr-close" type="button" aria-label="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
-      </button>
-      <p class="eyebrow" id="qr-heading"></p>
-      <div class="qr-tile" id="qr-tile"></div>
-      <p class="qr-name" id="qr-name"></p>
-      <p class="qr-caption" id="qr-caption"></p>
-    </div>
 
     <!-- Portrait hero (flip card) -->
     <section class="hero reveal" id="hero">
@@ -390,6 +479,20 @@ window.CARD = {
     </div>
   </div>
 
+  <!-- QR sheet (dialog) -->
+  <div class="qr" id="qr-layer">
+    <div class="qr-overlay" id="qr-overlay"></div>
+    <div class="qr-panel" id="qr" role="dialog" aria-modal="true" aria-labelledby="qr-heading" aria-describedby="qr-caption">
+      <button class="qr-close" id="qr-close" type="button" aria-label="Close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 6 6 18M6 6l12 12"/></svg>
+      </button>
+      <p class="qr-heading" id="qr-heading"></p>
+      <div class="qr-tile" id="qr-tile"></div>
+      <p class="qr-name" id="qr-name"></p>
+      <p class="qr-caption" id="qr-caption"></p>
+    </div>
+  </div>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 </main>
 
@@ -442,7 +545,10 @@ window.CARD = {
 
   $("back-logo").src = C.back.logo;
   $("back-logo").alt = C.org;
-  $("back-line").textContent = C.back.line;
+  var backLine = $("back-line"), accent = C.back.lineAccent || "";
+  var at = accent ? C.back.line.lastIndexOf(accent) : -1;
+  if (at < 0) backLine.textContent = C.back.line;
+  else backLine.append(C.back.line.slice(0, at), el("span", "accent", accent), C.back.line.slice(at + accent.length));
   $("back-body").textContent = C.back.body;
 
   var role = $("role");
@@ -569,7 +675,7 @@ window.CARD = {
   });
 
   // ---------- QR ----------
-  var qr = $("qr"), content = $("content"), qrOpen = false;
+  var qr = $("qr-layer"), content = $("content"), qrOpen = false;
   function qrSvg(text) {
     if (window.qrcode.stringToBytesFuncs) window.qrcode.stringToBytes = window.qrcode.stringToBytesFuncs["UTF-8"];
     var q = window.qrcode(0, "M");
@@ -577,19 +683,22 @@ window.CARD = {
     q.make();
     var n = q.getModuleCount(), d = "";
     for (var r = 0; r < n; r++) for (var c = 0; c < n; c++) if (q.isDark(r, c)) d += "M" + c + " " + r + "h1v1h-1z";
-    // 2-module margin inside the 14px cream tile ≈ the 4-module quiet zone scanners want.
-    return '<svg viewBox="-2 -2 ' + (n + 4) + " " + (n + 4) + '" shape-rendering="crispEdges" role="img" aria-label="QR code linking to this page"><path fill="#0A0A0C" d="' + d + '"/></svg>';
+    // 2-module margin inside the 14px linen tile ≈ the 4-module quiet zone scanners want.
+    // Modules take the tile's text colour (--background).
+    return '<svg viewBox="-2 -2 ' + (n + 4) + " " + (n + 4) + '" shape-rendering="crispEdges" role="img" aria-label="QR code linking to this page"><path fill="currentColor" d="' + d + '"/></svg>';
   }
   function setQR(open) {
     qrOpen = open;
     if (open) $("qr-tile").innerHTML = qrSvg(pageUrl());
     qr.classList.toggle("is-open", open);
+    document.documentElement.classList.toggle("is-locked", open);
     hero.inert = open; content.inert = open;
     if (open) $("qr-close").focus({ preventScroll: true });
     else $("qr-btn").focus({ preventScroll: true });
   }
   $("qr-btn").addEventListener("click", function () { setQR(true); });
   $("qr-close").addEventListener("click", function () { setQR(false); });
+  $("qr-overlay").addEventListener("click", function () { setQR(false); });
   document.addEventListener("keydown", function (e) { if (e.key === "Escape" && qrOpen) setQR(false); });
 
   // ---------- save contact (vCard 3.0) ----------
