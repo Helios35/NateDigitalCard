@@ -1,0 +1,207 @@
+== phone: surfaces and states (74 measurements)
+PASS  13.89 (need 3)  front, rest                mark #E8E3DA       on #181818  div.hero-actions > #share-btn > svg
+PASS  14.03 (need 3)  front, rest                mark #E8E3DA       on #171717  div.hero-actions > #qr-btn > svg
+PASS   5.34 (need 4.5)  front, rest                text #F26A4B       on #202120  #front > div.front-text > #eyebrow "Chicago · 1:40 PM"
+PASS  13.33 (need 4.5)  front, rest                text #E8E3DA       on #201B1A  #front > div.front-text > #name "Nate Ivy"
+PASS   5.36 (need 3)  front, rest                mark #8E8A83       on #141414  #front > #flip-to-back > svg
+PASS    5.3 (need 4.5)  front, rest                text #8E8A83       on #171515  #front > #flip-to-back > #tap-label "Tap"
+PASS  14.41 (need 4.5)  front, rest                text #E8E3DA       on #141414  #content > #role > b "Lead Product Architect & CEO"
+PASS  12.45 (need 4.5)  front, rest                text #E8E3DA       on #222222  #content > #badges > span.badge "Agentic Systems"
+PASS  12.45 (need 4.5)  front, rest                text #E8E3DA       on #222222  #content > #badges > span.badge "Digital Products"
+PASS   7.71 (need 3)  front, rest                mark #363636       on #D1CFC0  #content > #save > svg
+PASS   7.71 (need 4.5)  front, rest                text #363636       on #D1CFC0  #content > #save > #save-label "Save my contact"
+PASS   5.36 (need 4.5)  front, rest                text #8E8A83       on #141414  div.card > #content > #links-heading "Follow along"
+PASS   5.63 (need 3)  front, rest                mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  front, rest                text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "Website"
+PASS   4.96 (need 4.5)  front, rest                text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS   4.96 (need 3)  front, rest                mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  front, rest                mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  front, rest                text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "LinkedIn"
+PASS   4.96 (need 4.5)  front, rest                text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS   4.96 (need 3)  front, rest                mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS   5.36 (need 4.5)  front, rest                text #8E8A83       on #141414  #content > footer.foot.reveal > #foot-text "© 2026 Next Sketch LLC"
+PASS  13.33 (need 4.5)  flipped, rest              text #E8E3DA       on #1C1C1C  #back > #back-line "We build agentic systems and digital pro"
+PASS   5.63 (need 4.5)  flipped, rest              text #F26A4B       on #1C1C1C  #back > #back-line > span.accent "work in production"
+PASS   4.96 (need 4.5)  flipped, rest              text #8E8A83       on #1C1C1C  #back > #back-body "Software your business runs on that we m"
+PASS   4.96 (need 3)  flipped, rest              mark #8E8A83       on #1C1C1C  #back > #flip-to-front > svg
+PASS   4.96 (need 4.5)  flipped, rest              text #8E8A83       on #1C1C1C  #back > #flip-to-front > #tap-back-label "Tap to flip back"
+PASS    7.5 (need 3)  QR sheet, rest             mark #E8E3DA @0.7  on #141414  #qr > #qr-close > svg
+PASS   5.36 (need 4.5)  QR sheet, rest             text #8E8A83       on #141414  #qr > #qr-heading "Scan to open"
+PASS  14.41 (need 3)  QR sheet, rest             mark #141414       on #E8E3DA  #qr > #qr-tile > svg
+PASS  14.41 (need 4.5)  QR sheet, rest             text #E8E3DA       on #141414  #qr > #qr-name "Nate Ivy"
+PASS   5.36 (need 4.5)  QR sheet, rest             text #8E8A83       on #141414  #qr > #qr-caption "Point a camera here to save my card."
+PASS  13.33 (need 4.5)  toast                      text #E8E3DA       on #1C1C1C  #toast "Link copied to clipboard."
+PASS  11.23 (need 3)  share-btn: active          mark #E8E3DA       on #2A2A2A  #share-btn > svg
+PASS  13.89 (need 3)  share-btn: focus-visible   mark #E8E3DA       on #181818  #share-btn > svg
+PASS  11.96 (need 3)  share-btn: focus-visible   ring #D1CFC0       on #121210  #share-btn focus ring
+PASS  11.23 (need 3)  qr-btn: active             mark #E8E3DA       on #2A2A2A  #qr-btn > svg
+PASS  14.03 (need 3)  qr-btn: focus-visible      mark #E8E3DA       on #171717  #qr-btn > svg
+PASS  12.14 (need 3)  qr-btn: focus-visible      ring #D1CFC0       on #101010  #qr-btn focus ring
+PASS   9.46 (need 3)  flip-to-back: active       mark #E8E3DA       on #363636  #flip-to-back > svg
+PASS   9.46 (need 4.5)  flip-to-back: active       text #E8E3DA       on #363636  #flip-to-back > #tap-label "Tap"
+PASS   5.36 (need 3)  flip-to-back: focus-visible mark #8E8A83       on #141414  #flip-to-back > svg
+PASS    5.3 (need 4.5)  flip-to-back: focus-visible text #8E8A83       on #171515  #flip-to-back > #tap-label "Tap"
+PASS  11.04 (need 3)  flip-to-back: focus-visible ring #D1CFC0       on #1D1A19  #flip-to-back focus ring
+PASS   5.16 (need 3)  save: active               mark #363636       on #ABAA9E  #save > svg
+PASS   5.16 (need 4.5)  save: active               text #363636       on #ABAA9E  #save > #save-label "Save my contact"
+PASS   7.71 (need 3)  save: focus-visible        mark #363636       on #D1CFC0  #save > svg
+PASS   7.71 (need 4.5)  save: focus-visible        text #363636       on #D1CFC0  #save > #save-label "Save my contact"
+PASS  11.75 (need 3)  save: focus-visible        ring #D1CFC0       on #141414  #save focus ring
+PASS   4.74 (need 3)  link-1: active             mark #F26A4B       on #2A2A2A  a.link > span.link-icon > svg
+PASS  11.23 (need 4.5)  link-1: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-name "Website"
+PASS  11.23 (need 4.5)  link-1: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS  11.23 (need 3)  link-1: active             mark #E8E3DA       on #2A2A2A  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  link-1: focus-visible      mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  link-1: focus-visible      text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "Website"
+PASS   4.96 (need 4.5)  link-1: focus-visible      text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS   4.96 (need 3)  link-1: focus-visible      mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS  11.75 (need 3)  link-1: focus-visible      ring #D1CFC0       on #141414  #links > a:nth-of-type(1) focus ring
+PASS   4.74 (need 3)  link-2: active             mark #F26A4B       on #2A2A2A  a.link > span.link-icon > svg
+PASS  11.23 (need 4.5)  link-2: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-name "LinkedIn"
+PASS  11.23 (need 4.5)  link-2: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS  11.23 (need 3)  link-2: active             mark #E8E3DA       on #2A2A2A  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  link-2: focus-visible      mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  link-2: focus-visible      text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "LinkedIn"
+PASS   4.96 (need 4.5)  link-2: focus-visible      text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS   4.96 (need 3)  link-2: focus-visible      mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS  11.75 (need 3)  link-2: focus-visible      ring #D1CFC0       on #141414  #links > a:nth-of-type(2) focus ring
+PASS   9.46 (need 3)  flip-to-front: active      mark #E8E3DA       on #363636  #flip-to-front > svg
+PASS   9.46 (need 4.5)  flip-to-front: active      text #E8E3DA       on #363636  #flip-to-front > #tap-back-label "Tap to flip back"
+PASS   4.96 (need 3)  flip-to-front: focus-visible mark #8E8A83       on #1C1C1C  #flip-to-front > svg
+PASS   4.96 (need 4.5)  flip-to-front: focus-visible text #8E8A83       on #1C1C1C  #flip-to-front > #tap-back-label "Tap to flip back"
+PASS  10.87 (need 3)  flip-to-front: focus-visible ring #D1CFC0       on #1C1C1C  #flip-to-front focus ring
+PASS  11.23 (need 3)  qr-close: active           mark #E8E3DA       on #2A2A2A  #qr-close > svg
+PASS  14.41 (need 3)  qr-close: focus-visible    mark #E8E3DA       on #141414  #qr-close > svg
+PASS  11.75 (need 3)  qr-close: focus-visible    ring #D1CFC0       on #141414  #qr-close focus ring
+== phone: over the video, worst of 686 measurements (40 frames + poster)
+PASS   5.25 (need 4.5)  at 1.375  #F26A4B       on #222223  rest | div.front-text > #eyebrow (text)
+PASS  13.33 (need 4.5)  at 1      #E8E3DA       on #201B1A  rest | div.front-text > #name (text)
+PASS  13.89 (need 3)  at 0      #E8E3DA       on #181818  rest | #share-btn > svg (mark)
+PASS  11.23 (need 3)  at 0      #E8E3DA       on #2A2A2A  active | #share-btn > svg (mark)
+PASS  13.89 (need 3)  at 0      #E8E3DA       on #181818  focus-visible | #share-btn > svg (mark)
+PASS   11.7 (need 3)  at 2.375  #D1CFC0       on #161415  focus-visible | #share-btn focus ring
+PASS  14.03 (need 3)  at 0      #E8E3DA       on #171717  rest | #qr-btn > svg (mark)
+PASS  11.23 (need 3)  at 0      #E8E3DA       on #2A2A2A  active | #qr-btn > svg (mark)
+PASS  14.03 (need 3)  at 0      #E8E3DA       on #171717  focus-visible | #qr-btn > svg (mark)
+PASS  12.14 (need 3)  at 0      #D1CFC0       on #101010  focus-visible | #qr-btn focus ring
+PASS   5.32 (need 3)  at 2.5    #8E8A83       on #151514  rest | #flip-to-back > svg (mark)
+PASS    5.3 (need 4.5)  at 0      #8E8A83       on #171515  rest | #flip-to-back > #tap-label (text)
+PASS   9.46 (need 3)  at 0      #E8E3DA       on #363636  active | #flip-to-back > svg (mark)
+PASS   9.46 (need 4.5)  at 0      #E8E3DA       on #363636  active | #flip-to-back > #tap-label (text)
+PASS   5.32 (need 3)  at 2.5    #8E8A83       on #151514  focus-visible | #flip-to-back > svg (mark)
+PASS    5.3 (need 4.5)  at 0      #8E8A83       on #171515  focus-visible | #flip-to-back > #tap-label (text)
+PASS  11.04 (need 3)  at 0      #D1CFC0       on #1D1A19  focus-visible | #flip-to-back focus ring
+== desktop: surfaces and states (91 measurements)
+PASS     14 (need 3)  front, rest                mark #E8E3DA       on #181717  div.hero-actions > #share-btn > svg
+PASS  14.16 (need 3)  front, rest                mark #E8E3DA       on #161616  div.hero-actions > #qr-btn > svg
+PASS   5.38 (need 4.5)  front, rest                text #F26A4B       on #202020  #front > div.front-text > #eyebrow "Chicago · 1:46 PM"
+PASS  13.37 (need 4.5)  front, rest                text #E8E3DA       on #1F1B19  #front > div.front-text > #name "Nate Ivy"
+PASS    5.3 (need 3)  front, rest                mark #8E8A83       on #171515  #front > #flip-to-back > svg
+PASS    5.3 (need 4.5)  front, rest                text #8E8A83       on #171515  #front > #flip-to-back > #tap-label "Tap"
+PASS  14.41 (need 4.5)  front, rest                text #E8E3DA       on #141414  #content > #role > b "Lead Product Architect & CEO"
+PASS  12.45 (need 4.5)  front, rest                text #E8E3DA       on #222222  #content > #badges > span.badge "Agentic Systems"
+PASS  12.45 (need 4.5)  front, rest                text #E8E3DA       on #222222  #content > #badges > span.badge "Digital Products"
+PASS   7.71 (need 3)  front, rest                mark #363636       on #D1CFC0  #content > #save > svg
+PASS   7.71 (need 4.5)  front, rest                text #363636       on #D1CFC0  #content > #save > #save-label "Save my contact"
+PASS   5.36 (need 4.5)  front, rest                text #8E8A83       on #141414  div.card > #content > #links-heading "Follow along"
+PASS   5.63 (need 3)  front, rest                mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  front, rest                text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "Website"
+PASS   4.96 (need 4.5)  front, rest                text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS   4.96 (need 3)  front, rest                mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  front, rest                mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  front, rest                text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "LinkedIn"
+PASS   4.96 (need 4.5)  front, rest                text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS   4.96 (need 3)  front, rest                mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS   5.36 (need 4.5)  front, rest                text #8E8A83       on #141414  #content > footer.foot.reveal > #foot-text "© 2026 Next Sketch LLC"
+PASS  13.33 (need 4.5)  flipped, rest              text #E8E3DA       on #1C1C1C  #back > #back-line "We build agentic systems and digital pro"
+PASS   5.63 (need 4.5)  flipped, rest              text #F26A4B       on #1C1C1C  #back > #back-line > span.accent "work in production"
+PASS   4.96 (need 4.5)  flipped, rest              text #8E8A83       on #1C1C1C  #back > #back-body "Software your business runs on that we m"
+PASS   4.96 (need 3)  flipped, rest              mark #8E8A83       on #1C1C1C  #back > #flip-to-front > svg
+PASS   4.96 (need 4.5)  flipped, rest              text #8E8A83       on #1C1C1C  #back > #flip-to-front > #tap-back-label "Tap to flip back"
+PASS    7.5 (need 3)  QR sheet, rest             mark #E8E3DA @0.7  on #141414  #qr > #qr-close > svg
+PASS   5.36 (need 4.5)  QR sheet, rest             text #8E8A83       on #141414  #qr > #qr-heading "Scan to open"
+PASS  14.41 (need 3)  QR sheet, rest             mark #141414       on #E8E3DA  #qr > #qr-tile > svg
+PASS  14.41 (need 4.5)  QR sheet, rest             text #E8E3DA       on #141414  #qr > #qr-name "Nate Ivy"
+PASS   5.36 (need 4.5)  QR sheet, rest             text #8E8A83       on #141414  #qr > #qr-caption "Point a camera here to save my card."
+PASS  13.33 (need 4.5)  toast                      text #E8E3DA       on #1C1C1C  #toast "Link copied to clipboard."
+PASS  13.16 (need 3)  share-btn: hover           mark #E8E3DA       on #1E1D1D  #share-btn > svg
+PASS  11.23 (need 3)  share-btn: active          mark #E8E3DA       on #2A2A2A  #share-btn > svg
+PASS     14 (need 3)  share-btn: focus-visible   mark #E8E3DA       on #181717  #share-btn > svg
+PASS  12.14 (need 3)  share-btn: focus-visible   ring #D1CFC0       on #101010  #share-btn focus ring
+PASS  13.33 (need 3)  qr-btn: hover              mark #E8E3DA       on #1C1C1C  #qr-btn > svg
+PASS  11.23 (need 3)  qr-btn: active             mark #E8E3DA       on #2A2A2A  #qr-btn > svg
+PASS  14.16 (need 3)  qr-btn: focus-visible      mark #E8E3DA       on #161616  #qr-btn > svg
+PASS  12.23 (need 3)  qr-btn: focus-visible      ring #D1CFC0       on #0F0F0F  #qr-btn focus ring
+PASS  11.96 (need 3)  flip-to-back: hover        mark #E8E3DA       on #262525  #flip-to-back > svg
+PASS  11.96 (need 4.5)  flip-to-back: hover        text #E8E3DA       on #262525  #flip-to-back > #tap-label "Tap"
+PASS   9.46 (need 3)  flip-to-back: active       mark #E8E3DA       on #363636  #flip-to-back > svg
+PASS   9.46 (need 4.5)  flip-to-back: active       text #E8E3DA       on #363636  #flip-to-back > #tap-label "Tap"
+PASS    5.3 (need 3)  flip-to-back: focus-visible mark #8E8A83       on #171515  #flip-to-back > svg
+PASS    5.3 (need 4.5)  flip-to-back: focus-visible text #8E8A83       on #171515  #flip-to-back > #tap-label "Tap"
+PASS  11.51 (need 3)  flip-to-back: focus-visible ring #D1CFC0       on #181615  #flip-to-back focus ring
+PASS    6.4 (need 3)  save: hover                mark #363636       on #BFBDAF  #save > svg
+PASS    6.4 (need 4.5)  save: hover                text #363636       on #BFBDAF  #save > #save-label "Save my contact"
+PASS   5.16 (need 3)  save: active               mark #363636       on #ABAA9E  #save > svg
+PASS   5.16 (need 4.5)  save: active               text #363636       on #ABAA9E  #save > #save-label "Save my contact"
+PASS   7.71 (need 3)  save: focus-visible        mark #363636       on #D1CFC0  #save > svg
+PASS   7.71 (need 4.5)  save: focus-visible        text #363636       on #D1CFC0  #save > #save-label "Save my contact"
+PASS  11.44 (need 3)  save: focus-visible        ring #D1CFC0       on #171717  #save focus ring
+PASS   5.26 (need 3)  link-1: hover              mark #F26A4B       on #222222  a.link > span.link-icon > svg
+PASS  12.45 (need 4.5)  link-1: hover              text #E8E3DA       on #222222  a.link > span.link-text > span.link-name "Website"
+PASS   4.63 (need 4.5)  link-1: hover              text #8E8A83       on #222222  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS  12.45 (need 3)  link-1: hover              mark #E8E3DA       on #222222  a.link > span.link-arrow > svg
+PASS   4.74 (need 3)  link-1: active             mark #F26A4B       on #2A2A2A  a.link > span.link-icon > svg
+PASS  11.23 (need 4.5)  link-1: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-name "Website"
+PASS  11.23 (need 4.5)  link-1: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS  11.23 (need 3)  link-1: active             mark #E8E3DA       on #2A2A2A  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  link-1: focus-visible      mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  link-1: focus-visible      text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "Website"
+PASS   4.96 (need 4.5)  link-1: focus-visible      text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "nextsketch.com"
+PASS   4.96 (need 3)  link-1: focus-visible      mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS  11.75 (need 3)  link-1: focus-visible      ring #D1CFC0       on #141414  #links > a:nth-of-type(1) focus ring
+PASS   5.26 (need 3)  link-2: hover              mark #F26A4B       on #222222  a.link > span.link-icon > svg
+PASS  12.45 (need 4.5)  link-2: hover              text #E8E3DA       on #222222  a.link > span.link-text > span.link-name "LinkedIn"
+PASS   4.63 (need 4.5)  link-2: hover              text #8E8A83       on #222222  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS  12.45 (need 3)  link-2: hover              mark #E8E3DA       on #222222  a.link > span.link-arrow > svg
+PASS   4.74 (need 3)  link-2: active             mark #F26A4B       on #2A2A2A  a.link > span.link-icon > svg
+PASS  11.23 (need 4.5)  link-2: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-name "LinkedIn"
+PASS  11.23 (need 4.5)  link-2: active             text #E8E3DA       on #2A2A2A  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS  11.23 (need 3)  link-2: active             mark #E8E3DA       on #2A2A2A  a.link > span.link-arrow > svg
+PASS   5.63 (need 3)  link-2: focus-visible      mark #F26A4B       on #1C1C1C  a.link > span.link-icon > svg
+PASS  13.33 (need 4.5)  link-2: focus-visible      text #E8E3DA       on #1C1C1C  a.link > span.link-text > span.link-name "LinkedIn"
+PASS   4.96 (need 4.5)  link-2: focus-visible      text #8E8A83       on #1C1C1C  a.link > span.link-text > span.link-sub "Nate Ivy"
+PASS   4.96 (need 3)  link-2: focus-visible      mark #8E8A83       on #1C1C1C  a.link > span.link-arrow > svg
+PASS  11.75 (need 3)  link-2: focus-visible      ring #D1CFC0       on #141414  #links > a:nth-of-type(2) focus ring
+PASS  11.38 (need 3)  flip-to-front: hover       mark #E8E3DA       on #292929  #flip-to-front > svg
+PASS  11.38 (need 4.5)  flip-to-front: hover       text #E8E3DA       on #292929  #flip-to-front > #tap-back-label "Tap to flip back"
+PASS   9.46 (need 3)  flip-to-front: active      mark #E8E3DA       on #363636  #flip-to-front > svg
+PASS   9.46 (need 4.5)  flip-to-front: active      text #E8E3DA       on #363636  #flip-to-front > #tap-back-label "Tap to flip back"
+PASS   4.96 (need 3)  flip-to-front: focus-visible mark #8E8A83       on #1C1C1C  #flip-to-front > svg
+PASS   4.96 (need 4.5)  flip-to-front: focus-visible text #8E8A83       on #1C1C1C  #flip-to-front > #tap-back-label "Tap to flip back"
+PASS  10.64 (need 3)  flip-to-front: focus-visible ring #D1CFC0       on #1E1E1E  #flip-to-front focus ring
+PASS  14.41 (need 3)  qr-close: hover            mark #E8E3DA       on #141414  #qr-close > svg
+PASS  11.23 (need 3)  qr-close: active           mark #E8E3DA       on #2A2A2A  #qr-close > svg
+PASS  14.41 (need 3)  qr-close: focus-visible    mark #E8E3DA       on #141414  #qr-close > svg
+PASS  11.54 (need 3)  qr-close: focus-visible    ring #D1CFC0       on #161616  #qr-close focus ring
+== desktop: over the video, worst of 846 measurements (40 frames + poster)
+PASS   5.26 (need 4.5)  at 3.875  #F26A4B       on #222222  rest | div.front-text > #eyebrow (text)
+PASS  13.33 (need 4.5)  at 3.5    #E8E3DA       on #201B19  rest | div.front-text > #name (text)
+PASS     14 (need 3)  at 0      #E8E3DA       on #181717  rest | #share-btn > svg (mark)
+PASS  13.16 (need 3)  at 0      #E8E3DA       on #1E1D1D  hover | #share-btn > svg (mark)
+PASS  11.23 (need 3)  at 0      #E8E3DA       on #2A2A2A  active | #share-btn > svg (mark)
+PASS     14 (need 3)  at 0      #E8E3DA       on #181717  focus-visible | #share-btn > svg (mark)
+PASS  12.14 (need 3)  at 0      #D1CFC0       on #101010  focus-visible | #share-btn focus ring
+PASS  14.16 (need 3)  at 0      #E8E3DA       on #161616  rest | #qr-btn > svg (mark)
+PASS  13.33 (need 3)  at 0      #E8E3DA       on #1C1C1C  hover | #qr-btn > svg (mark)
+PASS  11.23 (need 3)  at 0      #E8E3DA       on #2A2A2A  active | #qr-btn > svg (mark)
+PASS  14.16 (need 3)  at 0      #E8E3DA       on #161616  focus-visible | #qr-btn > svg (mark)
+PASS  12.23 (need 3)  at 0.125  #D1CFC0       on #0F0F0F  focus-visible | #qr-btn focus ring
+PASS   5.26 (need 3)  at 3      #8E8A83       on #171615  rest | #flip-to-back > svg (mark)
+PASS    5.3 (need 4.5)  at 1      #8E8A83       on #171515  rest | #flip-to-back > #tap-label (text)
+PASS  11.85 (need 3)  at 3      #E8E3DA       on #262625  hover | #flip-to-back > svg (mark)
+PASS  11.96 (need 4.5)  at 0      #E8E3DA       on #262525  hover | #flip-to-back > #tap-label (text)
+PASS   9.46 (need 3)  at 0      #E8E3DA       on #363636  active | #flip-to-back > svg (mark)
+PASS   9.46 (need 4.5)  at 0      #E8E3DA       on #363636  active | #flip-to-back > #tap-label (text)
+PASS   5.26 (need 3)  at 3      #8E8A83       on #171615  focus-visible | #flip-to-back > svg (mark)
+PASS    5.3 (need 4.5)  at 1      #8E8A83       on #171515  focus-visible | #flip-to-back > #tap-label (text)
+PASS   11.4 (need 3)  at 4.25   #D1CFC0       on #191716  focus-visible | #flip-to-back focus ring

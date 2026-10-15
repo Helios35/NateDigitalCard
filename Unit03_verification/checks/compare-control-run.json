@@ -1,0 +1,983 @@
+{
+ "images": [
+  {
+   "vp": "phone",
+   "file": "active-flip-to-back.png",
+   "size": "306x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-flip-to-front.png",
+   "size": "615x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-link-1.png",
+   "size": "984x267",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-link-2.png",
+   "size": "984x264",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-qr-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-qr-close.png",
+   "size": "168x168",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-save.png",
+   "size": "984x228",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "active-share-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "disabled-save.png",
+   "size": "984x228",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "disabled-share-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "flipped.png",
+   "size": "1170x2907",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-flip-to-back.png",
+   "size": "306x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-flip-to-front.png",
+   "size": "615x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-link-1.png",
+   "size": "984x267",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-link-2.png",
+   "size": "984x264",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-qr-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-qr-close.png",
+   "size": "168x168",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-save.png",
+   "size": "984x228",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "focus-share-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "front.png",
+   "size": "1170x2907",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-flip-to-back.png",
+   "size": "306x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-flip-to-front.png",
+   "size": "615x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-link-1.png",
+   "size": "984x267",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-link-2.png",
+   "size": "984x264",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-qr-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-qr-close.png",
+   "size": "168x168",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-save.png",
+   "size": "984x228",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "hover-share-btn.png",
+   "size": "216x216",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "qr-tile.png",
+   "size": "804x804",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "qr-viewport.png",
+   "size": "1170x2532",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "qr.png",
+   "size": "1170x2907",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "reduced.png",
+   "size": "1170x2907",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "toast-save.png",
+   "size": "1170x2532",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "phone",
+   "file": "toast-share.png",
+   "size": "1170x2532",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-flip-to-back.png",
+   "size": "94x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-flip-to-front.png",
+   "size": "197x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-link-1.png",
+   "size": "394x89",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-link-2.png",
+   "size": "394x88",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-qr-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-qr-close.png",
+   "size": "56x56",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-save.png",
+   "size": "394x76",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "active-share-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "disabled-save.png",
+   "size": "394x76",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "disabled-share-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "flipped.png",
+   "size": "1440x933",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-flip-to-back.png",
+   "size": "94x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-flip-to-front.png",
+   "size": "197x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-link-1.png",
+   "size": "394x89",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-link-2.png",
+   "size": "394x88",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-qr-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-qr-close.png",
+   "size": "56x56",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-save.png",
+   "size": "394x76",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "focus-share-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "front.png",
+   "size": "1440x933",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-flip-to-back.png",
+   "size": "94x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-flip-to-front.png",
+   "size": "197x60",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-link-1.png",
+   "size": "394x89",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-link-2.png",
+   "size": "394x88",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-qr-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-qr-close.png",
+   "size": "56x56",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-save.png",
+   "size": "394x76",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "hover-share-btn.png",
+   "size": "64x64",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-tile.png",
+   "size": "268x268",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-viewport.png",
+   "size": "1440x900",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "qr.png",
+   "size": "1440x933",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "reduced.png",
+   "size": "1440x933",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "toast-save.png",
+   "size": "1440x900",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "toast-share.png",
+   "size": "1440x900",
+   "pixelsDiffering": 0,
+   "maxChannelDelta": 0
+  }
+ ],
+ "styles": [
+  {
+   "vp": "phone",
+   "file": "styles-active-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-active-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-disabled-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-disabled-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-flipped.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-focus-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-front.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-hover-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-qr.json",
+   "elements": 101,
+   "properties": 48278,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-reduced.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "phone",
+   "file": "styles-toast.json",
+   "elements": 101,
+   "properties": 48278,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-active-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-disabled-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-disabled-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-flipped.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-focus-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-front.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-flip-to-back.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-flip-to-front.json",
+   "elements": 7,
+   "properties": 3346,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-link-1.json",
+   "elements": 11,
+   "properties": 5258,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-link-2.json",
+   "elements": 10,
+   "properties": 4780,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-qr-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-qr-close.json",
+   "elements": 3,
+   "properties": 1434,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-save.json",
+   "elements": 4,
+   "properties": 1912,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-hover-share-btn.json",
+   "elements": 6,
+   "properties": 2868,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-qr.json",
+   "elements": 101,
+   "properties": 48278,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-reduced.json",
+   "elements": 99,
+   "properties": 47322,
+   "diffs": [],
+   "diffCount": 0
+  },
+  {
+   "vp": "desktop",
+   "file": "styles-toast.json",
+   "elements": 101,
+   "properties": 48278,
+   "diffs": [],
+   "diffCount": 0
+  }
+ ],
+ "summary": {
+  "images": "68/68 pixel-identical",
+  "styleDumps": "62/62 identical (custom properties excluded)",
+  "propertiesCompared": 641476
+ }
+}
