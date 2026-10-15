@@ -2,5 +2,9 @@
 .claude/
 Unit01_BUILD_NOTES.md
 Unit02_BUILD_NOTES.md
+Unit03_BUILD_NOTES.md
 Unit01_verification/
 Unit02_verification/
+Unit03_verification/
+# Source art for the favicon and touch icon. The page never loads it (Unit 03, check 10).
+brand/mark-linen.svg

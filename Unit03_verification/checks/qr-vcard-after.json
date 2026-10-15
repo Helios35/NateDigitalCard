@@ -1,0 +1,170 @@
+{
+ "qr": [
+  {
+   "vp": "phone",
+   "file": "qr-tile.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "phone",
+   "file": "qr-tile.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "phone",
+   "file": "qr-viewport.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "phone",
+   "file": "qr-viewport.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "phone",
+   "file": "qr.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "phone",
+   "file": "qr.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-tile.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-tile.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-viewport.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr-viewport.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr.png",
+   "scale": "1/1",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "qr.png",
+   "scale": "1/4",
+   "decoded": [
+    "http://localhost:61045/"
+   ],
+   "pass": true
+  }
+ ],
+ "vcard": [
+  {
+   "vp": "phone",
+   "file": "Nate Ivy.vcf",
+   "bytes": 57496,
+   "crlfOnly": true,
+   "maxLineBytes": 75,
+   "N": " Nathan  Ivy ",
+   "FN": "Nathan Ivy",
+   "NICKNAME": "Nate",
+   "ORG": [
+    "NextSketch"
+   ],
+   "TITLE": "Lead Product Architect & CEO",
+   "EMAIL": "nate@nextsketch.com",
+   "TEL": null,
+   "ADR": null,
+   "URLs": [
+    "https://www.nextsketch.com",
+    "https://www.linkedin.com/in/nathan-ivy"
+   ],
+   "photo": {
+    "bytes": 41190,
+    "size": "480x480",
+    "sha256": "88d341c64f766143",
+    "identicalToContactJpg": true
+   },
+   "pass": true
+  },
+  {
+   "vp": "desktop",
+   "file": "Nate Ivy.vcf",
+   "bytes": 57496,
+   "crlfOnly": true,
+   "maxLineBytes": 75,
+   "N": " Nathan  Ivy ",
+   "FN": "Nathan Ivy",
+   "NICKNAME": "Nate",
+   "ORG": [
+    "NextSketch"
+   ],
+   "TITLE": "Lead Product Architect & CEO",
+   "EMAIL": "nate@nextsketch.com",
+   "TEL": null,
+   "ADR": null,
+   "URLs": [
+    "https://www.nextsketch.com",
+    "https://www.linkedin.com/in/nathan-ivy"
+   ],
+   "photo": {
+    "bytes": 41190,
+    "size": "480x480",
+    "sha256": "88d341c64f766143",
+    "identicalToContactJpg": true
+   },
+   "pass": true
+  }
+ ]
+}

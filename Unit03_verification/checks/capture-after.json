@@ -1,0 +1,116 @@
+{
+ "phone": {
+  "vp": "phone",
+  "media": {
+   "pointerCoarse": true,
+   "hover": false,
+   "eyebrow": "Chicago · 3:42 PM",
+   "fonts": [
+    [
+     "Inter",
+     true
+    ],
+    [
+     "Playfair Display",
+     true
+    ],
+    [
+     "JetBrains Mono",
+     true
+    ]
+   ],
+   "hasShare": "undefined"
+  },
+  "tabOrder": [
+   "share-btn",
+   "qr-btn",
+   "flip-to-back",
+   "save",
+   "link-1",
+   "link-2"
+  ],
+  "toasts": {
+   "share": {
+    "text": "Link copied to clipboard.",
+    "shown": true
+   },
+   "save": {
+    "text": "Contact card downloaded — open it to add me.",
+    "shown": true
+   }
+  },
+  "afterFlipFocus": "flip-to-front",
+  "afterFlipBackFocus": "flip-to-back",
+  "qrOpenFocus": "qr-close",
+  "qrCloseFocus": "qr-btn",
+  "reduced": {
+   "videoSrc": null,
+   "durations": [
+    "0s"
+   ],
+   "delays": [
+    "0s"
+   ],
+   "animations": [
+    "none"
+   ]
+  }
+ },
+ "desktop": {
+  "vp": "desktop",
+  "media": {
+   "pointerCoarse": false,
+   "hover": true,
+   "eyebrow": "Chicago · 3:42 PM",
+   "fonts": [
+    [
+     "Inter",
+     true
+    ],
+    [
+     "Playfair Display",
+     true
+    ],
+    [
+     "JetBrains Mono",
+     true
+    ]
+   ],
+   "hasShare": "undefined"
+  },
+  "tabOrder": [
+   "share-btn",
+   "qr-btn",
+   "flip-to-back",
+   "save",
+   "link-1",
+   "link-2"
+  ],
+  "toasts": {
+   "share": {
+    "text": "Link copied to clipboard.",
+    "shown": true
+   },
+   "save": {
+    "text": "Contact card downloaded — open it to add me.",
+    "shown": true
+   }
+  },
+  "afterFlipFocus": "flip-to-front",
+  "afterFlipBackFocus": "flip-to-back",
+  "qrOpenFocus": "qr-close",
+  "qrCloseFocus": "qr-btn",
+  "reduced": {
+   "videoSrc": null,
+   "durations": [
+    "0s"
+   ],
+   "delays": [
+    "0s"
+   ],
+   "animations": [
+    "none"
+   ]
+  }
+ }
+}

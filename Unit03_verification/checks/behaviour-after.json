@@ -1,0 +1,398 @@
+{
+ "phone": {
+  "vp": "phone",
+  "time": {
+   "shown": "Chicago · 1:43 PM",
+   "expected": "Chicago · 1:43 PM",
+   "pass": true
+  },
+  "video": {
+   "src": "media/portrait.mp4",
+   "muted": true,
+   "loop": true,
+   "playsInline": true,
+   "paused": false,
+   "w": 1080,
+   "h": 1080,
+   "duration": 5,
+   "playing": true
+  },
+  "flip": {
+   "tapToBack": {
+    "flipped": true,
+    "videoPaused": true,
+    "frontInert": true,
+    "backInert": false,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "video",
+    "toast": null
+   },
+   "tapToFront": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "BODY",
+    "toast": null
+   },
+   "enterToBack": {
+    "flipped": true,
+    "videoPaused": true,
+    "frontInert": true,
+    "backInert": false,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "flip-to-front",
+    "toast": null
+   },
+   "spaceToFront": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "flip-to-back",
+    "toast": null
+   }
+  },
+  "qr": {
+   "openClick": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": true,
+    "heroInert": true,
+    "contentInert": true,
+    "locked": true,
+    "focus": "qr-close",
+    "toast": null
+   },
+   "closeEsc": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "openEnter": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": true,
+    "heroInert": true,
+    "contentInert": true,
+    "locked": true,
+    "focus": "qr-close",
+    "toast": null
+   },
+   "closeButtonEnter": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "scrollYBefore": 0,
+   "scrollYWhileOpen": 0,
+   "closeOverlay": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "encodes": "http://localhost:61045/"
+  },
+  "shareSheet": [
+   {
+    "title": "Nate Ivy",
+    "text": "Nate Ivy — Lead Product Architect & CEO, NextSketch",
+    "url": "http://localhost:61045/"
+   }
+  ],
+  "save": {
+   "toast": "Contact card downloaded — open it to add me.",
+   "files": [
+    "Nate Ivy.vcf"
+   ],
+   "download": "Nate Ivy.vcf"
+  },
+  "links": [
+   {
+    "text": "Website nextsketch.com",
+    "href": "https://www.nextsketch.com/",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   {
+    "text": "LinkedIn Nate Ivy",
+    "href": "https://www.linkedin.com/in/nathan-ivy",
+    "target": "_blank",
+    "rel": "noopener"
+   }
+  ],
+  "linksMatchCard": true,
+  "net1": {
+   "requests": [
+    "http://localhost:61045/",
+    "http://localhost:61045/fonts/playfair-display.woff2",
+    "http://localhost:61045/fonts/inter.woff2",
+    "http://localhost:61045/vendor/qrcode.js",
+    "http://localhost:61045/media/poster.jpg",
+    "http://localhost:61045/media/contact.jpg",
+    "http://localhost:61045/brand/logo-linen.svg",
+    "http://localhost:61045/media/portrait.mp4",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAnIGhlaWdodD0nMTgwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+",
+    "http://localhost:61045/fonts/jetbrains-mono.woff2",
+    "http://localhost:61045/favicon.png"
+   ],
+   "bytes": 1375995,
+   "console": [],
+   "errors": []
+  },
+  "shareCopy": {
+   "toast": "Link copied to clipboard.",
+   "clipboard": "http://localhost:61045/"
+  },
+  "budget": {
+   "requests": 11,
+   "outside": [],
+   "bytes": 1375995,
+   "console": [],
+   "errors": []
+  },
+  "reduced": {
+   "videoRequested": false,
+   "bytes": 370178,
+   "console": [],
+   "errors": []
+  }
+ },
+ "desktop": {
+  "vp": "desktop",
+  "time": {
+   "shown": "Chicago · 1:43 PM",
+   "expected": "Chicago · 1:43 PM",
+   "pass": true
+  },
+  "video": {
+   "src": "media/portrait.mp4",
+   "muted": true,
+   "loop": true,
+   "playsInline": true,
+   "paused": false,
+   "w": 1080,
+   "h": 1080,
+   "duration": 5,
+   "playing": true
+  },
+  "flip": {
+   "clickToBack": {
+    "flipped": true,
+    "videoPaused": true,
+    "frontInert": true,
+    "backInert": false,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "video",
+    "toast": null
+   },
+   "clickToFront": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "BODY",
+    "toast": null
+   },
+   "enterToBack": {
+    "flipped": true,
+    "videoPaused": true,
+    "frontInert": true,
+    "backInert": false,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "flip-to-front",
+    "toast": null
+   },
+   "spaceToFront": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "flip-to-back",
+    "toast": null
+   }
+  },
+  "qr": {
+   "openClick": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": true,
+    "heroInert": true,
+    "contentInert": true,
+    "locked": true,
+    "focus": "qr-close",
+    "toast": null
+   },
+   "closeEsc": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "openEnter": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": true,
+    "heroInert": true,
+    "contentInert": true,
+    "locked": true,
+    "focus": "qr-close",
+    "toast": null
+   },
+   "closeButtonEnter": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "scrollYBefore": 0,
+   "scrollYWhileOpen": 0,
+   "closeOverlay": {
+    "flipped": false,
+    "videoPaused": false,
+    "frontInert": false,
+    "backInert": true,
+    "qrOpen": false,
+    "heroInert": false,
+    "contentInert": false,
+    "locked": false,
+    "focus": "qr-btn",
+    "toast": null
+   },
+   "encodes": "http://localhost:61045/"
+  },
+  "shareSheet": [
+   {
+    "title": "Nate Ivy",
+    "text": "Nate Ivy — Lead Product Architect & CEO, NextSketch",
+    "url": "http://localhost:61045/"
+   }
+  ],
+  "save": {
+   "toast": "Contact card downloaded — open it to add me.",
+   "files": [
+    "Nate Ivy.vcf"
+   ],
+   "download": "Nate Ivy.vcf"
+  },
+  "links": [
+   {
+    "text": "Website nextsketch.com",
+    "href": "https://www.nextsketch.com/",
+    "target": "_blank",
+    "rel": "noopener"
+   },
+   {
+    "text": "LinkedIn Nate Ivy",
+    "href": "https://www.linkedin.com/in/nathan-ivy",
+    "target": "_blank",
+    "rel": "noopener"
+   }
+  ],
+  "linksMatchCard": true,
+  "net1": {
+   "requests": [
+    "http://localhost:61045/",
+    "http://localhost:61045/fonts/playfair-display.woff2",
+    "http://localhost:61045/fonts/inter.woff2",
+    "http://localhost:61045/vendor/qrcode.js",
+    "http://localhost:61045/media/poster.jpg",
+    "http://localhost:61045/media/contact.jpg",
+    "http://localhost:61045/brand/logo-linen.svg",
+    "http://localhost:61045/media/portrait.mp4",
+    "data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxODAnIGhlaWdodD0nMTgwJz48ZmlsdGVyIGlkPSduJz48ZmVUdXJidWxlbmNlIHR5cGU9J2ZyYWN0YWxOb2lzZScgYmFzZUZyZXF1ZW5jeT0nMC45JyBudW1PY3RhdmVzPScyJyBzdGl0Y2hUaWxlcz0nc3RpdGNoJy8+PC9maWx0ZXI+PHJlY3Qgd2lkdGg9JzEwMCUnIGhlaWdodD0nMTAwJScgZmlsdGVyPSd1cmwoI24pJy8+PC9zdmc+",
+    "http://localhost:61045/fonts/jetbrains-mono.woff2",
+    "http://localhost:61045/favicon.png"
+   ],
+   "bytes": 1375995,
+   "console": [],
+   "errors": []
+  },
+  "shareCopy": {
+   "toast": "Link copied to clipboard.",
+   "clipboard": "http://localhost:61045/"
+  },
+  "budget": {
+   "requests": 11,
+   "outside": [],
+   "bytes": 1375995,
+   "console": [],
+   "errors": []
+  },
+  "reduced": {
+   "videoRequested": false,
+   "bytes": 370178,
+   "console": [],
+   "errors": []
+  }
+ }
+}

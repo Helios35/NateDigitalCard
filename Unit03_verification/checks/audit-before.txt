@@ -1,0 +1,282 @@
+style lines 101-414; token block (:root) lines 118-152; END EDIT at line 87
+
+################ CHECK 1: one token block ################
+
+$ grep -c '^  :root {' index.html
+1
+[exit 0]
+
+$ awk -v a=118 -v b=152 'NR>=a && NR<=b' index.html | grep -oE '^ *--[a-z0-9-]+' | sort | uniq -d
+[exit 0]
+
+$ awk 'NR>=101 && NR<=414' index.html | grep -nE '^\s*--[a-z0-9-]+:' | awk -F: -v a=118 -v s=101 -v b=152 '{ln=$1+s-1; if (ln<a || ln>b) print ln": "$0}'
+[exit 0]
+# transition / animation times written outside the block (0s = an instant swap is allowed):
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -E 'transition|animation' | grep -oE '[0-9]*\.?[0-9]+m?s\b' | sort | uniq -c
+      1 .09s
+      1 .4s
+      1 .6s
+      1 .7s
+      4 0s
+[exit 0]
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -nE '(transition|animation)[^;]*[^0-9](\.[0-9]+|[1-9][0-9]*)m?s\b'
+36:171:   .reveal { animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards; }
+69:204:     transform-style: preserve-3d; transition: transform .7s var(--ease);
+77:212:     transition: visibility 0s linear .09s;
+87:222:   .portrait-video { opacity: 0; transition: opacity .4s ease; }
+[exit 0]
+# easing curves outside the block:
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | grep -E 'cubic-bezier'
+171:   .reveal { animation: rise .6s cubic-bezier(.2, .7, .2, 1) backwards; }
+[exit 0]
+# font families, sizes, radii, shadows written as literals outside the block:
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -E 'font-family:' | grep -v 'var(--'
+103:     font-family: "Inter";
+108:     font-family: "Playfair Display";
+113:     font-family: "JetBrains Mono";
+[exit 0]
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -oE 'font-size: *[^;]+' | sort | uniq -c
+      6 font-size: 11px
+      2 font-size: 12px
+      5 font-size: 14px
+      1 font-size: 16px
+      1 font-size: 24px
+      1 font-size: 27px
+      1 font-size: 38px
+[exit 0]
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -E 'border-radius:' | grep -v 'border-radius: *var(--'
+280:     color: var(--foreground); border: 1px solid var(--border); border-radius: 999px; background: var(--secondary);
+[exit 0]
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | awk -v s=101 -v e=414 -F': ' '$1>=s && $1<=e' | grep -E '(box|text)-shadow:'
+178:     background: var(--background); box-shadow: var(--shadow-xl);
+192:     color: var(--foreground); box-shadow: var(--shadow-xs);
+242:     color: var(--foreground); text-shadow: 0 2px 18px rgb(0 0 0 / 0.5);
+351:   :focus-visible { outline: none; box-shadow: 0 0 0 3px var(--ring); }
+353:     border-color: var(--ring); box-shadow: 0 0 0 3px var(--ring);
+357:   .save:focus-visible { box-shadow: 0 0 0 2px var(--background), 0 0 0 5px var(--ring); }
+379:     background: var(--background); box-shadow: var(--shadow-lg);
+404:     background: var(--card); color: var(--foreground); border: 1px solid var(--border); box-shadow: var(--shadow-lg);
+[exit 0]
+
+################ CHECK 2: no loose colour values ################
+# hex anywhere outside the token block (the grain is base64; decoded separately below):
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | grep -nE '#[0-9a-fA-F]{3,8}\b' | grep -vE 'href="#|getElementById|url\(#|#(qr|share|flip|save|links|video|poster|eyebrow|name|back|front|hero|content|toast|quick|badges|role|foot|tap)'
+20:20: <meta name="theme-color" content="#101010">
+[exit 0]
+# rgb()/rgba()/hsl() outside the token block:
+
+$ awk -v a=118 -v b=152 'NR<a || NR>b {print NR": "$0}' index.html | grep -nE '(rgba?|hsla?|hwb|lab|lch|oklab|oklch|color-mix)\('
+156:191:     background: rgb(44 44 44 / 0.3);   /* dark:bg-input/30 */
+198:233:     background: linear-gradient(180deg, rgb(20 20 20 / 0) 34%, rgb(20 20 20 / 0.6) 60%, rgb(20 20 20 / 0.9) 76%, var(--background) 100%);
+207:242:     color: var(--foreground); text-shadow: 0 2px 18px rgb(0 0 0 / 0.5);
+258:293:   .save:active { background: rgb(209 207 192 / 0.8); }
+303:338:     .icon-btn:hover { background: rgb(44 44 44 / 0.5); }   /* dark:hover:bg-input/50 */
+305:340:     .flip-hint:hover { background: rgb(54 54 54 / 0.5); color: var(--foreground); }   /* dark:hover:bg-accent/50 */
+307:342:     .save:hover { background: rgb(209 207 192 / 0.9); }   /* hover:bg-primary/90 */
+308:343:     .save:active { background: rgb(209 207 192 / 0.8); }
+340:375:   .qr-overlay { position: absolute; inset: 0; background: rgb(0 0 0 / 0.5); }
+[exit 0]
+# CSS named colours used as values outside the block (comments stripped; transparent/currentColor are keywords, listed separately):
+
+$ python -I "Unit03_verification/tools/named_colours.py" index.html 118 152
+named colours: 0
+  (none)
+keywords (not colours: no hue of their own): 20
+163: transparent
+249: transparent
+385: transparent
+424: currentColor
+427: currentColor
+444: currentColor
+453: currentColor
+466: currentColor
+487: currentColor
+507: currentColor
+508: currentColor
+509: currentColor
+510: currentColor
+511: currentColor
+512: currentColor
+513: currentColor
+514: currentColor
+516: currentColor
+688: currentColor
+[exit 0]
+# theme-color and every inline style= attribute:
+
+$ grep -n 'theme-color' index.html
+20:<meta name="theme-color" content="#101010">
+[exit 0]
+
+$ grep -nE ' style="' index.html
+[exit 1]
+# colour literals in the script (QR fill, inline styles set from JS):
+
+$ awk '/^<script>$/,/^<\/script>$/' index.html | grep -nE '#[0-9a-fA-F]{6}\b|rgba?\(|\.style\.(color|background|fill|stroke)|fill="#'
+[exit 1]
+# the grain texture, decoded:
+
+$ grep -oE 'base64,[A-Za-z0-9+/=]+' index.html | cut -d, -f2 | base64 -d; echo
+<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/></filter><rect width='100%' height='100%' filter='url(#n)'/></svg>
+[exit 0]
+# every SVG file that deploys:
+
+$ grep -oiE '#[0-9a-f]{3,8}\b|rgba?\([^)]*\)' brand/*.svg | sort | uniq -c
+      2 brand/logo-linen.svg:#E8E3DA
+      1 brand/logo-linen.svg:#F26A4B
+      1 brand/mark-linen.svg:#E8E3DA
+      1 brand/mark-linen.svg:#F26A4B
+[exit 0]
+
+################ CHECK 3: no old tokens, fonts or logos ################
+
+$ grep -nE -- '--(gold|gold-deep|cream|black|surface|line|line-soft)\b' index.html brand/*.svg
+[exit 1]
+
+$ grep -rniE 'space.?grotesk' --include='*' . --exclude-dir=.git --exclude-dir=.claude --exclude-dir=Unit02_verification --exclude=Unit0*_BUILD_NOTES.md
+[exit 1]
+
+$ grep -rnE 'logo-cream|logo-dark|mark-cream' . --exclude-dir=.git --exclude-dir=.claude --exclude-dir=Unit02_verification --exclude=Unit0*_BUILD_NOTES.md
+[exit 1]
+
+$ ls fonts brand
+brand:
+logo-linen.svg
+mark-linen.svg
+
+fonts:
+OFL-inter.txt
+OFL-jetbrains-mono.txt
+OFL-playfair-display.txt
+inter.woff2
+jetbrains-mono.woff2
+playfair-display.woff2
+[exit 0]
+
+################ CHECK 4: fin's scales only ################
+
+$ grep -nE -- '--radius[a-z-]*:' index.html
+136:    --radius: 0.5rem;
+137:    --radius-md: calc(var(--radius) * 0.8);
+138:    --radius-lg: var(--radius);
+139:    --radius-xl: calc(var(--radius) * 1.4);
+[exit 0]
+
+$ grep -noE 'border-radius: *[^;]+' index.html | sort -t: -k3 | uniq -c -f0
+      1 280:border-radius: 999px
+      1 301:border-radius: var(--radius-lg)
+      1 317:border-radius: var(--radius-lg)
+      1 378:border-radius: var(--radius-lg)
+      1 403:border-radius: var(--radius-lg)
+      1 190:border-radius: var(--radius-md)
+      1 249:border-radius: var(--radius-md)
+      1 289:border-radius: var(--radius-md)
+      1 385:border-radius: var(--radius-md)
+      1 395:border-radius: var(--radius-md)
+      1 177:border-radius: var(--radius-xl)
+[exit 0]
+
+$ grep -nE -- '--shadow-[a-z0-9]+:' index.html
+142:    --shadow-xs: 0 1px 4px 1px rgb(0 0 0 / 0.04);
+143:    --shadow-lg: 0 8px 30px 5px rgb(0 0 0 / 0.06);
+144:    --shadow-xl: 0 14px 44px 7px rgb(0 0 0 / 0.07);
+[exit 0]
+
+$ grep -noE 'box-shadow: *[^;]+' index.html
+178:box-shadow: var(--shadow-xl)
+192:box-shadow: var(--shadow-xs)
+351:box-shadow: 0 0 0 3px var(--ring)
+353:box-shadow: 0 0 0 3px var(--ring)
+357:box-shadow: 0 0 0 2px var(--background), 0 0 0 5px var(--ring)
+379:box-shadow: var(--shadow-lg)
+404:box-shadow: var(--shadow-lg)
+[exit 0]
+
+$ grep -noE 'font-family: *[^;]+' index.html
+103:font-family: "Inter"
+108:font-family: "Playfair Display"
+113:font-family: "JetBrains Mono"
+161:font-family: var(--sans)
+237:font-family: var(--mono)
+241:font-family: var(--serif)
+250:font-family: var(--mono)
+263:font-family: var(--serif)
+279:font-family: var(--mono)
+309:font-family: var(--mono)
+391:font-family: var(--mono)
+397:font-family: var(--serif)
+[exit 0]
+
+$ grep -oE 'font-size: *[^;]+' index.html | sort | uniq -c
+      6 font-size: 11px
+      2 font-size: 12px
+      5 font-size: 14px
+      1 font-size: 16px
+      1 font-size: 24px
+      1 font-size: 27px
+      1 font-size: 38px
+[exit 0]
+
+$ grep -oE 'font-weight: *[^;]+' index.html | sort | uniq -c
+      1 font-weight: 100 800
+      1 font-weight: 100 900
+      1 font-weight: 400 900
+      8 font-weight: 500
+      1 font-weight: 600
+      3 font-weight: 700
+[exit 0]
+
+################ CHECK 9: content lives in the edit block ################
+# quoted words in the markup and script below END EDIT (line 87):
+
+$ awk -v e=87 'NR>e' index.html | grep -nE 'aria-label="[^"]+"|alt="[^"]+"|title="[^"]+"|placeholder=' | sed 's/^/+87 /'
++87 336:        <button class="icon-btn" id="share-btn" type="button" aria-label="Share">
++87 339:        <button class="icon-btn" id="qr-btn" type="button" aria-label="Show QR code" aria-haspopup="dialog" aria-controls="qr">
++87 399:      <button class="qr-close" id="qr-close" type="button" aria-label="Close">
++87 601:    return '<svg viewBox="-2 -2 ' + (n + 4) + " " + (n + 4) + '" shape-rendering="crispEdges" role="img" aria-label="QR code linking to this page"><path fill="currentColor" d="' + d + '"/></svg>';
+[exit 0]
+
+$ awk -v e=87 'NR>e' index.html | grep -nE '"[A-Z][a-z]+( [a-z]+)+"|" to [a-z]+|en-US|lang=' | sed 's/^/+87 /'
++87 451:  $("flip-to-back").setAttribute("aria-label", L.tap + " to flip the card");
++87 511:  var timeFmt = new Intl.DateTimeFormat("en-US", { timeZone: C.place.timeZone, hour: "numeric", minute: "2-digit" });
+[exit 0]
+
+$ awk -v e=87 'NR>e' index.html | grep -nE '>[^<{}]*[A-Za-z]{3,}[^<{}]*<' | grep -v '<script\|<style\|//' | sed 's/^/+87 /'
+[exit 0]
+
+################ CHECK 10: nothing dead ################
+# classes defined in CSS but never used in markup or script:
+
+$ python -I "Unit03_verification/tools/dead.py" index.html
+CSS classes: 51 | unused: none
+custom properties declared: 25 | declared twice: none | never read: none | read but never declared: none
+ids: 36 | referenced by script/ARIA but missing: none | never referenced (styled by id or anchors only): none
+keyframes: ['rise'] | unused: none
+script names declared: 65 | used only once (declared, never read): none
+ICONS keys: ['website', 'linkedin', 'instagram', 'x', 'youtube', 'tiktok', 'phone', 'mail'] (website/linkedin/instagram/x/youtube/tiktok are the edit block's documented options; phone/mail serve quickActions)
+[exit 0]
+# files that deploy (tracked, minus .vercelignore) that the page never references (licences are expected):
+
+$ comm -23 <(git ls-files | sort) <(git ls-files -ci --exclude-from=.vercelignore | sort) | grep -vE '^\.(gitignore|vercelignore)$' | while read f; do b=$(basename "$f"); [ "$f" = index.html ] || grep -qF "$b" index.html || echo "deploys, unreferenced: $f"; done
+deploys, unreferenced: brand/mark-linen.svg
+deploys, unreferenced: fonts/OFL-inter.txt
+deploys, unreferenced: fonts/OFL-jetbrains-mono.txt
+deploys, unreferenced: fonts/OFL-playfair-display.txt
+[exit 0]
+
+$ cat .vercelignore
+# Not part of the site — keep out of deploys
+.claude/
+Unit01_BUILD_NOTES.md
+Unit02_BUILD_NOTES.md
+Unit01_verification/
+Unit02_verification/
+[exit 0]
