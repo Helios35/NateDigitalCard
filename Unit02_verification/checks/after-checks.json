@@ -1,0 +1,218 @@
+{
+ "phone": {
+  "hero": {
+   "muted": true,
+   "playsInline": true,
+   "loop": true,
+   "paused": false,
+   "src": "portrait.mp4",
+   "size": "1080x1080",
+   "duration": 5,
+   "posterBeforePlaying": true,
+   "posterMs": 181,
+   "playingMs": 279
+  },
+  "loop": {
+   "framesSeen": 167,
+   "wraps": [
+    {
+     "from": 4.958,
+     "to": 0,
+     "wallGapMs": 108
+    }
+   ],
+   "maxWallGapMs": 108,
+   "gapsLongerThan2Frames": 1,
+   "stillPlaying": true
+  },
+  "time": {
+   "shown": "Chicago · 11:13 AM",
+   "expected": "Chicago · 11:14 AM",
+   "match": false
+  },
+  "flipTap": {
+   "flipped": true,
+   "videoPaused": true,
+   "active": "video"
+  },
+  "flipTapBack": {
+   "flipped": false,
+   "videoPaused": false,
+   "active": ""
+  },
+  "flipKey": {
+   "flipped": true,
+   "videoPaused": true,
+   "active": "flip-to-front"
+  },
+  "flipKeyBack": {
+   "flipped": false,
+   "videoPaused": false,
+   "active": "flip-to-back"
+  },
+  "qrOpen": {
+   "open": true,
+   "active": "qr-close",
+   "locked": true,
+   "heroInert": true
+  },
+  "qrEsc": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "qrEnter": {
+   "open": true,
+   "active": "qr-close",
+   "locked": true,
+   "heroInert": true
+  },
+  "qrCloseByEnterOnClose": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "qrOverlayClick": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "share": {
+   "toast": "Link copied to clipboard.",
+   "shown": true,
+   "hasShareApi": false
+  },
+  "save": {
+   "file": "after-phone-Nate_Ivy.vcf",
+   "toast": "Contact card downloaded — open it to add me."
+  },
+  "requests": 11,
+  "outsideRequests": [],
+  "transferredBytes": 1374438,
+  "consoleIssues": [],
+  "reducedMotion": {
+   "videoSrc": null,
+   "videoPlaying": false,
+   "paused": true,
+   "heroAnimation": "none",
+   "flipTransition": "0s",
+   "linkTransition": "0s",
+   "flipDurationAfterClick": "0s",
+   "flippedImmediately": true,
+   "videoRequested": false,
+   "transferredBytes": 368621,
+   "consoleIssues": []
+  }
+ },
+ "desktop": {
+  "hero": {
+   "muted": true,
+   "playsInline": true,
+   "loop": true,
+   "paused": false,
+   "src": "portrait.mp4",
+   "size": "1080x1080",
+   "duration": 5,
+   "posterBeforePlaying": true,
+   "posterMs": 933,
+   "playingMs": 985
+  },
+  "loop": {
+   "framesSeen": 168,
+   "wraps": [
+    {
+     "from": 4.958,
+     "to": 0,
+     "wallGapMs": 100
+    }
+   ],
+   "maxWallGapMs": 100,
+   "gapsLongerThan2Frames": 1,
+   "stillPlaying": true
+  },
+  "time": {
+   "shown": "Chicago · 11:14 AM",
+   "expected": "Chicago · 11:14 AM",
+   "match": true
+  },
+  "flipTap": {
+   "flipped": true,
+   "videoPaused": true,
+   "active": "video"
+  },
+  "flipTapBack": {
+   "flipped": false,
+   "videoPaused": false,
+   "active": ""
+  },
+  "flipKey": {
+   "flipped": true,
+   "videoPaused": true,
+   "active": "flip-to-front"
+  },
+  "flipKeyBack": {
+   "flipped": false,
+   "videoPaused": false,
+   "active": "flip-to-back"
+  },
+  "qrOpen": {
+   "open": true,
+   "active": "qr-close",
+   "locked": true,
+   "heroInert": true
+  },
+  "qrEsc": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "qrEnter": {
+   "open": true,
+   "active": "qr-close",
+   "locked": true,
+   "heroInert": true
+  },
+  "qrCloseByEnterOnClose": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "qrOverlayClick": {
+   "open": false,
+   "active": "qr-btn",
+   "locked": false,
+   "heroInert": false
+  },
+  "share": {
+   "toast": "Link copied to clipboard.",
+   "shown": true,
+   "hasShareApi": false
+  },
+  "save": {
+   "file": "after-desktop-Nate_Ivy.vcf",
+   "toast": "Contact card downloaded — open it to add me."
+  },
+  "requests": 11,
+  "outsideRequests": [],
+  "transferredBytes": 1374438,
+  "consoleIssues": [],
+  "reducedMotion": {
+   "videoSrc": null,
+   "videoPlaying": false,
+   "paused": true,
+   "heroAnimation": "none",
+   "flipTransition": "0s",
+   "linkTransition": "0s",
+   "flipDurationAfterClick": "0s",
+   "flippedImmediately": true,
+   "videoRequested": false,
+   "transferredBytes": 368621,
+   "consoleIssues": []
+  }
+ }
+}

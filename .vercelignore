@@ -1,3 +1,6 @@
 # Not part of the site — keep out of deploys
 .claude/
 Unit01_BUILD_NOTES.md
+Unit02_BUILD_NOTES.md
+Unit01_verification/
+Unit02_verification/
